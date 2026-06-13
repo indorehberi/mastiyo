@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Builder - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="builder.html" class="nav-item active"><span class="icon">🔨</span> Builder</a><a href="templates.html" class="nav-item"><span class="icon">📑</span> Templates</a><a href="schedule.html" class="nav-item"><span class="icon">⏰</span> Schedule</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Reports • <strong>Builder</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Report Builder</h1>
+      <p class="page-subtitle">Drag-drop custom report configuration</p>
+
+      <div class="grid-1-1">
+        <div class="card">
+          <h3>Configuration</h3>
+          <div class="form-group">
+            <label class="form-label">Report Name</label>
+            <input type="text" class="form-control" value="Monthly P&L">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Data Source</label>
+            <select class="form-control"><option>Financial Data</option><option>Sales</option><option>Inventory</option></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Filters</label>
+            <input type="text" class="form-control" placeholder="Date range, company, etc.">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Layout</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Components: Table, Chart, Card, Metric</p>
+          <div style="padding: 1rem; background: var(--bg); border-radius: 4px; text-align: center; color: var(--text-muted);">
+            📊 Drag components here
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button class="btn btn-secondary" onclick="alert('Report saved as draft')">Save Draft</button>
+        <button class="btn btn-primary" onclick="alert('Report published')">Publish</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

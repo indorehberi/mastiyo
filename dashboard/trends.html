@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trends - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="kpi-overview.html" class="nav-item"><span class="icon">📊</span> Overview</a><a href="trends.html" class="nav-item active"><span class="icon">📈</span> Trends</a><a href="alerts.html" class="nav-item"><span class="icon">⚠️</span> Alerts</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Analysis • <strong>Trend Analysis</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Trend Analysis</h1>
+      <p class="page-subtitle">Historical patterns and forecasted trends</p>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label class="form-label">Time Period</label>
+        <select class="form-control" style="width: 200px;">
+          <option>12 Months</option>
+          <option>6 Months</option>
+          <option>3 Months</option>
+          <option>YTD</option>
+        </select>
+      </div>
+
+      <div class="grid-1-1">
+        <div class="card">
+          <h3>Revenue Trend (12M)</h3>
+          <div class="chart-container"><div class="chart-placeholder">📊 Line chart: Revenue over 12 months with forecast</div></div>
+          <div class="progress-card" style="margin-top: 1rem;">
+            <div class="progress-card-header"><span>Growth Rate</span><span class="progress-percentage">+18.5%</span></div>
+            <div class="progress-bar"><div class="progress-bar-fill success" style="width: 75%;"></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Profit Trend (12M)</h3>
+          <div class="chart-container"><div class="chart-placeholder">📊 Line chart: Profit margin trend</div></div>
+          <div class="progress-card" style="margin-top: 1rem;">
+            <div class="progress-card-header"><span>Avg Margin</span><span class="progress-percentage">22%</span></div>
+            <div class="progress-bar"><div class="progress-bar-fill warning" style="width: 22%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Key Insights</h3>
+        <ul class="list-group" style="font-size: 0.9rem;">
+          <li>📈 Revenue growing consistently at 18.5% YoY</li>
+          <li>⚠️ Profit margin declining - cost pressure identified</li>
+          <li>💡 Seasonal peaks in Q4 detected (plan accordingly)</li>
+          <li>🎯 On track to exceed Rp 30B annual revenue target</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

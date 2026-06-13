@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Rules - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="validation-rules.html" class="nav-item active"><span class="icon">⚙️</span> Rules</a><a href="reconciliation.html" class="nav-item"><span class="icon">🔄</span> Reconcile</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Quality • <strong>Validation Rules</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Validation Rules</h1>
+      <p class="page-subtitle"><button class="btn btn-primary" onclick="alert('New rule created')">+ New Rule</button></p>
+
+      <div class="card">
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Rule</th><th>Field</th><th>Condition</th><th>Action</th><th>Violations</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Invoice Amount Required</strong></td><td>invoices.amount</td><td>NOT NULL</td><td>Block</td><td>0</td></tr>
+            <tr><td><strong>Positive Amount</strong></td><td>invoices.amount</td><td>> 0</td><td>Block</td><td>0</td></tr>
+            <tr><td><strong>Valid Invoice Date</strong></td><td>invoices.date</td><td>Is DATE</td><td>Warn</td><td>3</td></tr>
+            <tr><td><strong>Future Due Date</strong></td><td>invoices.due_date</td><td>> invoice_date</td><td>Warn</td><td>5</td></tr>
+            <tr><td><strong>Vendor Exists</strong></td><td>invoices.vendor_id</td><td>FK VALID</td><td>Block</td><td>2</td></tr>
+            <tr><td><strong>No Duplicate</strong></td><td>invoices.invoice_no</td><td>UNIQUE</td><td>Block</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

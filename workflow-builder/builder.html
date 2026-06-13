@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow Builder - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="builder.html" class="nav-item active"><span class="icon">⚙️</span> Builder</a><a href="templates.html" class="nav-item"><span class="icon">📑</span> Templates</a><a href="my-workflows.html" class="nav-item"><span class="icon">⚡</span> My Workflows</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Customization • <strong>Workflow Builder</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Create Workflow</h1>
+      <p class="page-subtitle">Visual workflow automation • No coding</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 200px; gap: 1.5rem;">
+        <!-- Canvas -->
+        <div class="card">
+          <div style="margin-bottom: 1.5rem;">
+            <input type="text" class="form-control" placeholder="Workflow name..." style="margin-bottom: 0.5rem;">
+            <label style="font-size: 0.85rem; color: var(--text-muted);">Trigger: When invoice paid</label>
+          </div>
+          <div style="background: #f9fafb; border: 2px dashed var(--border); border-radius: var(--radius); padding: 2rem; min-height: 300px; text-align: center;">
+            <div style="color: var(--text-muted);">🔗 Build workflow with triggers, conditions, actions</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <button class="btn btn-secondary" onclick="alert('Draft saved')">Save</button>
+            <button class="btn btn-primary" onclick="alert('Workflow activated')" style="margin-left: 0.5rem;">Activate</button>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="card">
+          <h4 style="margin-bottom: 1rem;">Actions</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <button class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start; font-size: 0.8rem;">📧 Send Email</button>
+            <button class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start; font-size: 0.8rem;">📝 Create Record</button>
+            <button class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start; font-size: 0.8rem;">🔄 Update Field</button>
+            <button class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start; font-size: 0.8rem;">✓ Approve</button>
+            <button class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start; font-size: 0.8rem;">🔗 Call API</button>
+            <button class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start; font-size: 0.8rem;">📤 Export</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

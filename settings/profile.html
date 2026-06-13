@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/main.html" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <div class="nav-section">Management</div>
+      <a href="../admin/users-list.html" class="nav-item">
+        <span class="icon">👥</span> Users
+      </a>
+      <a href="../admin/companies-list.html" class="nav-item">
+        <span class="icon">🏢</span> Companies
+      </a>
+      <a href="../admin/roles-list.html" class="nav-item">
+        <span class="icon">👮</span> Roles
+      </a>
+      <div class="nav-section">Settings</div>
+      <a href="profile.html" class="nav-item active">
+        <span class="icon">👤</span> My Profile
+      </a>
+      <a href="organization.html" class="nav-item">
+        <span class="icon">⚙️</span> Organization
+      </a>
+      <a href="sessions.html" class="nav-item">
+        <span class="icon">🔓</span> Sessions
+      </a>
+      <div class="nav-section">Account</div>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Settings • <strong>My Profile</strong></div>
+      <div class="topbar-right">
+        <div class="notif-bell">🔔</div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">My Profile</h1>
+      <p class="page-subtitle">Manage your personal information and account settings</p>
+
+      <div style="max-width: 800px;">
+        
+        <!-- Profile Information -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Profile Information</h3>
+          
+          <div style="display: flex; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+            <div style="flex: 0 0 auto;">
+              <div style="width: 120px; height: 120px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                JD
+              </div>
+              <button class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 1rem;">
+                Change Photo
+              </button>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+              <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" value="John">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" value="Doe">
+                  </div>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" value="john@ptapm.com" disabled style="background: var(--bg); cursor: not-allowed;">
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" value="+62 812 3456 7890">
+                </div>
+                
+                <button type="button" class="btn btn-primary" onclick="alert('✓ Profile updated successfully!')">
+                  Save Changes
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Change Password -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Change Password</h3>
+          
+          <form style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label required">Current Password</label>
+              <input type="password" class="form-control" placeholder="Enter your current password">
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label required">New Password</label>
+              <input type="password" class="form-control" placeholder="Enter new password">
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">
+                Must contain uppercase, lowercase, number, and special character
+              </div>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label required">Confirm Password</label>
+              <input type="password" class="form-control" placeholder="Confirm new password">
+            </div>
+            
+            <button type="button" class="btn btn-primary" onclick="alert('✓ Password changed successfully!')">
+              Update Password
+            </button>
+          </form>
+        </div>
+
+        <!-- Two-Factor Authentication -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h3 style="margin: 0; color: var(--primary);">Two-Factor Authentication</h3>
+            <span style="color: var(--success); font-weight: 600;">✓ Enabled</span>
+          </div>
+          
+          <div style="padding: 1rem; background: var(--bg); border-radius: var(--radius); margin-bottom: 1.5rem;">
+            <p style="color: var(--text-muted); margin: 0;">Your account is protected with authenticator app. Last verified: 3 days ago</p>
+          </div>
+          
+          <div style="display: flex; gap: 0.5rem;">
+            <button type="button" class="btn btn-secondary" onclick="alert('🔑 Backup codes:\n• abc123def456\n• ghi789jkl012\n• mno345pqr678')">
+              View Backup Codes
+            </button>
+            <button type="button" class="btn btn-danger" onclick="alert('✓ 2FA disabled. Your account is now less secure.')">
+              Disable 2FA
+            </button>
+          </div>
+        </div>
+
+        <!-- Active Sessions -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Active Sessions</h3>
+          
+          <ul class="list-group" style="font-size: 0.9rem;">
+            <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--accent-light); border-radius: 4px; margin-bottom: 0.5rem; border: 1px solid var(--accent);">
+              <div>
+                <strong>🖥️ Chrome on macOS</strong>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">192.168.1.100 • Current session</p>
+              </div>
+              <span style="color: var(--text-muted);">5 min ago</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--bg); border-radius: 4px; margin-bottom: 0.5rem;">
+              <div>
+                <strong>📱 Safari on iPhone</strong>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">192.168.1.102 • Last active: 2 hours ago</p>
+              </div>
+              <button class="btn btn-danger btn-sm">Logout</button>
+            </li>
+          </ul>
+          
+          <button type="button" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;" onclick="alert('✓ All other sessions logged out!')">
+            Logout All Other Sessions
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

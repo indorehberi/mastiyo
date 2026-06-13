@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Mapping - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="mapping.html" class="nav-item active"><span class="icon">🔗</span> Mapping</a><a href="validation.html" class="nav-item"><span class="icon">✓</span> Validation</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Pipeline • <strong>Field Mapping</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Field Mapping</h1>
+      <p class="page-subtitle">Map extracted fields to database schema</p>
+
+      <div class="card">
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Source Field</th><th>Target DB Field</th><th>Transform</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Invoice Number</td><td>invoices.invoice_no</td><td>None</td><td><span class="badge badge-success">✓</span></td></tr>
+            <tr><td>Invoice Date</td><td>invoices.invoice_date</td><td>Parse to DATE</td><td><span class="badge badge-success">✓</span></td></tr>
+            <tr><td>Vendor Name</td><td>vendors.name</td><td>Lookup/Create</td><td><span class="badge badge-success">✓</span></td></tr>
+            <tr><td>Total Amount</td><td>invoices.total_amount</td><td>Parse currency</td><td><span class="badge badge-success">✓</span></td></tr>
+            <tr><td>Tax Amount</td><td>invoices.tax_amount</td><td>Parse currency</td><td><span class="badge badge-warning">⚠️ Confirm</span></td></tr>
+            <tr><td>Due Date</td><td>invoices.due_date</td><td>Parse to DATE</td><td><span class="badge badge-success">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button class="btn btn-primary" onclick="alert('Mapping validated and ready for sync')">Validate & Sync</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

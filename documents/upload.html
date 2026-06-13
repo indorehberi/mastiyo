@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Documents - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../../../wireframe-mastiyo/dashboard/main.html" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <div class="nav-section">Data Pipeline</div>
+      <a href="upload.html" class="nav-item active">
+        <span class="icon">📤</span> Upload Documents
+      </a>
+      <a href="list.html" class="nav-item">
+        <span class="icon">📁</span> Document Library
+      </a>
+      <a href="processing.html" class="nav-item">
+        <span class="icon">⚙️</span> Processing Queue
+      </a>
+      <div class="nav-section">Analysis</div>
+      <a href="../dashboard/kpi-overview.html" class="nav-item">
+        <span class="icon">📊</span> KPI Dashboard
+      </a>
+      <a href="../ai-intelligence/insights.html" class="nav-item">
+        <span class="icon">💡</span> AI Insights
+      </a>
+      <div class="nav-section">Account</div>
+      <a href="../../../wireframe-mastiyo/settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../../../wireframe-mastiyo/auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Data Pipeline • <strong>Upload Documents</strong></div>
+      <div class="topbar-right">
+        <div class="notif-bell">🔔</div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Upload Documents</h1>
+      <p class="page-subtitle">Import financial documents for automated processing and analysis</p>
+
+      <div style="max-width: 900px;">
+        
+        <!-- Upload Zone -->
+        <div class="card" style="border: 2px dashed var(--primary); padding: 3rem; text-align: center; cursor: pointer;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📁</div>
+          <h3 style="margin-bottom: 0.5rem; color: var(--primary);">Drop documents here or click to upload</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            Supported formats: PDF, Excel (.xlsx), CSV, Images (.jpg, .png, .tiff)
+          </p>
+          <input type="file" id="fileInput" multiple style="display: none;" accept=".pdf,.xlsx,.csv,.jpg,.png,.tiff" />
+          <button type="button" class="btn btn-primary" onclick="document.getElementById('fileInput').click();">
+            Choose Files
+          </button>
+        </div>
+
+        <!-- Quick Tips -->
+        <div class="card" style="background: var(--bg); border-left: 4px solid var(--info);">
+          <h3 style="margin-bottom: 1rem; color: var(--primary);">💡 Tips for Best Results</h3>
+          <ul style="margin-left: 1.5rem; line-height: 1.8;">
+            <li><strong>High Resolution Scans:</strong> For scanned documents, use minimum 300 DPI</li>
+            <li><strong>Clear Photos:</strong> Take photos at straight angles in good lighting</li>
+            <li><strong>Single Currency:</strong> Keep all numbers in the same currency</li>
+            <li><strong>Standard Layout:</strong> Documents with standard structure process faster</li>
+          </ul>
+        </div>
+
+        <!-- Recent Uploads -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Recent Uploads (Today)</h3>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Filename</th>
+                <th>Size</th>
+                <th>Type</th>
+                <th>Uploaded</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Invoice_Jan2026_001.pdf</strong></td>
+                <td>2.3 MB</td>
+                <td>PDF</td>
+                <td>2 hours ago</td>
+                <td><span class="status-badge status-success">✓ Processed</span></td>
+              </tr>
+              <tr>
+                <td><strong>Financial_Statement_Q4_2025.xlsx</strong></td>
+                <td>1.8 MB</td>
+                <td>Excel</td>
+                <td>5 hours ago</td>
+                <td><span class="status-badge status-success">✓ Processed</span></td>
+              </tr>
+              <tr>
+                <td><strong>Receipt_Scan_20260115.tiff</strong></td>
+                <td>4.2 MB</td>
+                <td>Image</td>
+                <td>1 day ago</td>
+                <td><span class="status-badge status-processing">⚙️ Processing</span></td>
+              </tr>
+              <tr>
+                <td><strong>Invoice_Jan2026_002.pdf</strong></td>
+                <td>2.1 MB</td>
+                <td>PDF</td>
+                <td>2 days ago</td>
+                <td><span class="status-badge status-success">✓ Processed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Upload Settings -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Upload Settings</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Auto-Start Processing</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Automatically start OCR and extraction</p>
+              </div>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-checkbox" checked>
+              </label>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Auto-Categorize</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Use AI to auto-categorize document types</p>
+              </div>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-checkbox" checked>
+              </label>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Duplicate Check</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Warn if document already uploaded</p>
+              </div>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-checkbox" checked>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;" onclick="alert('✓ Settings saved!')">
+            Save Settings
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+      const files = e.target.files;
+      if (files.length > 0) {
+        alert(`✓ ${files.length} file(s) uploaded successfully!\nProcessing will start automatically...`);
+      }
+    });
+  </script>
+
+</body>
+</html>

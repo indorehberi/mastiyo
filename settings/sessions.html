@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Sessions - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/main.html" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <div class="nav-section">Management</div>
+      <a href="../admin/users-list.html" class="nav-item">
+        <span class="icon">👥</span> Users
+      </a>
+      <a href="../admin/companies-list.html" class="nav-item">
+        <span class="icon">🏢</span> Companies
+      </a>
+      <a href="../admin/roles-list.html" class="nav-item">
+        <span class="icon">👮</span> Roles
+      </a>
+      <div class="nav-section">Settings</div>
+      <a href="profile.html" class="nav-item">
+        <span class="icon">👤</span> My Profile
+      </a>
+      <a href="organization.html" class="nav-item">
+        <span class="icon">⚙️</span> Organization
+      </a>
+      <a href="sessions.html" class="nav-item active">
+        <span class="icon">🔓</span> Sessions
+      </a>
+      <div class="nav-section">Account</div>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Settings • <strong>Active Sessions</strong></div>
+      <div class="topbar-right">
+        <div class="notif-bell">🔔</div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Active Sessions</h1>
+      <p class="page-subtitle">Manage your active login sessions across devices</p>
+
+      <div style="max-width: 900px;">
+        
+        <!-- Session Security Info -->
+        <div class="card alert alert-info" style="margin-bottom: 1.5rem;">
+          <span>ℹ️</span>
+          <div>
+            <strong>Keep your account secure</strong> - Review your active sessions regularly and log out from devices you don't recognize.
+          </div>
+        </div>
+
+        <!-- Current Session -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Current Session</h3>
+          
+          <div style="padding: 1.5rem; background: var(--accent-light); border: 2px solid var(--accent); border-radius: var(--radius);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Device</p>
+                <p style="font-weight: 600; margin: 0 0 1rem 0;">🖥️ Chrome on macOS</p>
+
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">IP Address</p>
+                <p style="font-weight: 600; margin: 0 0 1rem 0;">192.168.1.100</p>
+
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Location</p>
+                <p style="font-weight: 600; margin: 0;">Jakarta, Indonesia</p>
+              </div>
+
+              <div style="text-align: right;">
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Logged In</p>
+                <p style="font-weight: 600; margin: 0 0 1rem 0;">Jan 20, 2026 • 10:30 AM</p>
+
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Last Activity</p>
+                <p style="font-weight: 600; margin: 0 0 1rem 0;">5 minutes ago</p>
+
+                <span class="badge badge-success" style="font-size: 0.9rem;">Current</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Active Sessions -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h3 style="margin: 0; color: var(--primary);">Other Active Sessions (3)</h3>
+            <button type="button" class="btn btn-danger btn-sm" onclick="alert('✓ All other sessions logged out!')">
+              Logout All Other Sessions
+            </button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            
+            <!-- Session 1 -->
+            <div style="padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: flex-start;">
+              <div style="flex: 1;">
+                <p style="font-weight: 600; margin: 0 0 0.5rem 0;">📱 Safari on iPhone</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem; font-size: 0.85rem;">
+                  <div>
+                    <p style="color: var(--text-muted); margin: 0 0 0.25rem 0;">IP Address</p>
+                    <p style="margin: 0;">192.168.1.102</p>
+                  </div>
+                  <div>
+                    <p style="color: var(--text-muted); margin: 0 0 0.25rem 0;">Location</p>
+                    <p style="margin: 0;">Jakarta, Indonesia</p>
+                  </div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Last activity: 2 hours ago</p>
+              </div>
+              <button type="button" class="btn btn-danger btn-sm" onclick="alert('✓ Session logged out!')">
+                Logout
+              </button>
+            </div>
+
+            <!-- Session 2 -->
+            <div style="padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: flex-start;">
+              <div style="flex: 1;">
+                <p style="font-weight: 600; margin: 0 0 0.5rem 0;">💻 Edge on Windows</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem; font-size: 0.85rem;">
+                  <div>
+                    <p style="color: var(--text-muted); margin: 0 0 0.25rem 0;">IP Address</p>
+                    <p style="margin: 0;">203.45.67.89</p>
+                  </div>
+                  <div>
+                    <p style="color: var(--text-muted); margin: 0 0 0.25rem 0;">Location</p>
+                    <p style="margin: 0;">Bandung, Indonesia</p>
+                  </div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Last activity: 4 hours ago</p>
+              </div>
+              <button type="button" class="btn btn-danger btn-sm" onclick="alert('✓ Session logged out!')">
+                Logout
+              </button>
+            </div>
+
+            <!-- Session 3 -->
+            <div style="padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: flex-start;">
+              <div style="flex: 1;">
+                <p style="font-weight: 600; margin: 0 0 0.5rem 0;">🔍 Firefox on Linux</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem; font-size: 0.85rem;">
+                  <div>
+                    <p style="color: var(--text-muted); margin: 0 0 0.25rem 0;">IP Address</p>
+                    <p style="margin: 0;">10.0.0.45</p>
+                  </div>
+                  <div>
+                    <p style="color: var(--text-muted); margin: 0 0 0.25rem 0;">Location</p>
+                    <p style="margin: 0;">Unknown</p>
+                  </div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Last activity: 6 hours ago</p>
+              </div>
+              <button type="button" class="btn btn-danger btn-sm" onclick="alert('✓ Session logged out!')">
+                Logout
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Session History -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Recent Activity</h3>
+          
+          <ul class="list-group" style="font-size: 0.9rem;">
+            <li>
+              <strong>Login</strong> from Chrome on macOS (192.168.1.100)
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">Today, 10:30 AM</p>
+            </li>
+            <li>
+              <strong>Login</strong> from Safari on iPhone (192.168.1.102)
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">Today, 8:15 AM</p>
+            </li>
+            <li>
+              <strong>Logout</strong> from Edge on Windows (203.45.67.89)
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">Yesterday, 11:45 PM</p>
+            </li>
+            <li>
+              <strong>Login</strong> from Firefox on Linux (10.0.0.45)
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">Yesterday, 5:20 PM</p>
+            </li>
+            <li>
+              <strong>Password Changed</strong>
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">Jan 18, 2026, 2:10 PM</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Risk Manager - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">RISK MANAGER / COMPLIANCE</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/risk-manager.html" class="nav-item active">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      
+      <div class="nav-section">Risk Management</div>
+      <a href="../risk-advisor/dashboard.html" class="nav-item">
+        <span class="icon">⚠️</span> Risk Dashboard
+      </a>
+      <a href="../risk-advisor/risk-matrix.html" class="nav-item">
+        <span class="icon">📊</span> Risk Matrix
+      </a>
+      <a href="../risk-advisor/assessments.html" class="nav-item">
+        <span class="icon">📋</span> Assessments
+      </a>
+      <a href="../risk-advisor/mitigation.html" class="nav-item">
+        <span class="icon">✔️</span> Mitigation Plans
+      </a>
+
+      <div class="nav-section">Compliance</div>
+      <a href="../admin/audit-logs.html" class="nav-item">
+        <span class="icon">📝</span> Audit Logs
+      </a>
+      <a href="../data-quality/dashboard.html" class="nav-item">
+        <span class="icon">✅</span> Data Quality
+      </a>
+
+      <div class="nav-section">Reports</div>
+      <a href="../reports/list.html" class="nav-item">
+        <span class="icon">📋</span> Reports
+      </a>
+
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Risk Manager • <strong>Dashboard</strong></div>
+      <div class="topbar-right">
+        <input type="text" class="search-box" placeholder="Search...">
+        <div class="notif-bell">🔔<div class="dot"></div></div>
+        <div class="user-avatar">RM</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Risk & Compliance Dashboard</h1>
+      <p class="page-subtitle">PT APM Enterprise Risk Management & Mitigation</p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card" style="border-color: #E74C3C; background: rgba(231, 76, 60, 0.05);">
+          <div class="kpi-label">Risk Score</div>
+          <div class="kpi-value">6.8/10</div>
+          <div class="kpi-trend text-danger">↑ Moderate Risk</div>
+        </div>
+        <div class="kpi-card gold">
+          <div class="kpi-label">Critical Risks</div>
+          <div class="kpi-value">4</div>
+          <div class="kpi-trend">Require action</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Risk Mitigated</div>
+          <div class="kpi-value">78%</div>
+          <div class="kpi-trend up">↑ From Q1</div>
+        </div>
+        <div class="kpi-card success">
+          <div class="kpi-label">Compliance Status</div>
+          <div class="kpi-value">92%</div>
+          <div class="kpi-trend">All areas</div>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <div class="card">
+          <div class="card-header">Critical Risks (4)</div>
+          <div style="padding: 0.5rem 0;">
+            <div style="padding: 0.75rem; border-left: 3px solid #E74C3C; background: rgba(231, 76, 60, 0.05); border-radius: 4px; margin-bottom: 0.75rem;">
+              <div style="font-weight: 600; font-size: 0.9rem; color: #C0392B;">⚠️ High Overdue AR (Rp 5.2B)</div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Default risk from RSUD Bandung • Mitigation: Payment plan negotiation</p>
+            </div>
+            <div style="padding: 0.75rem; border-left: 3px solid #E74C3C; background: rgba(231, 76, 60, 0.05); border-radius: 4px; margin-bottom: 0.75rem;">
+              <div style="font-weight: 600; font-size: 0.9rem; color: #C0392B;">⚠️ Liquidity Risk</div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Dependent on customer collections • Mitigation: Line of credit setup</p>
+            </div>
+            <div style="padding: 0.75rem; border-left: 3px solid #E74C3C; background: rgba(231, 76, 60, 0.05); border-radius: 4px; margin-bottom: 0.75rem;">
+              <div style="font-weight: 600; font-size: 0.9rem; color: #C0392B;">⚠️ Market Volatility</div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Supply chain disruption impact • Mitigation: Diversify suppliers</p>
+            </div>
+            <div style="padding: 0.75rem; border-left: 3px solid #E74C3C; background: rgba(231, 76, 60, 0.05); border-radius: 4px;">
+              <div style="font-weight: 600; font-size: 0.9rem; color: #C0392B;">⚠️ Data Security Risk</div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Customer data compliance • Mitigation: Enhanced encryption & audit</p>
+            </div>
+          </div>
+          <a href="../risk-advisor/dashboard.html" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; justify-content: center;">Full Risk Dashboard</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Risk by Category</div>
+          <div style="padding: 1rem 0;">
+            <svg viewBox="0 0 320 200" style="width: 100%; height: auto; display: block;">
+              <circle cx="160" cy="100" r="80" fill="none" stroke="#E74C3C" stroke-width="25" stroke-dasharray="141 565" opacity="0.3"/>
+              <circle cx="160" cy="100" r="80" fill="none" stroke="#F39C12" stroke-width="25" stroke-dasharray="113 565" opacity="0.4" transform="rotate(90 160 100)"/>
+              <circle cx="160" cy="100" r="80" fill="none" stroke="#3498DB" stroke-width="25" stroke-dasharray="85 565" opacity="0.5" transform="rotate(180 160 100)"/>
+              <circle cx="160" cy="100" r="80" fill="none" stroke="#27AE60" stroke-width="25" stroke-dasharray="226 565" opacity="0.6" transform="rotate(270 160 100)"/>
+              
+              <text x="160" y="95" text-anchor="middle" font-size="28" font-weight="bold" fill="#1B4F72">6.8</text>
+              <text x="160" y="115" text-anchor="middle" font-size="12" fill="#7f8c8d">/10</text>
+              
+              <g transform="translate(20, 130)">
+                <circle cx="5" cy="5" r="3" fill="#E74C3C"/>
+                <text x="12" y="8" font-size="11" fill="#333">Financial (25%)</text>
+              </g>
+              <g transform="translate(20, 150)">
+                <circle cx="5" cy="5" r="3" fill="#F39C12"/>
+                <text x="12" y="8" font-size="11" fill="#333">Operational (20%)</text>
+              </g>
+              <g transform="translate(160, 130)">
+                <circle cx="5" cy="5" r="3" fill="#3498DB"/>
+                <text x="12" y="8" font-size="11" fill="#333">Compliance (15%)</text>
+              </g>
+              <g transform="translate(160, 150)">
+                <circle cx="5" cy="5" r="3" fill="#27AE60"/>
+                <text x="12" y="8" font-size="11" fill="#333">Strategic (40%)</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">Mitigation Status</div>
+        <div style="padding: 1rem;">
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Overdue AR Recovery Plan</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">In Progress: 60%</span>
+            </div>
+            <div style="width: 100%; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden;">
+              <div style="width: 60%; height: 100%; background: #F39C12;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Data Security Enhancement</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Completed: 85%</span>
+            </div>
+            <div style="width: 100%; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden;">
+              <div style="width: 85%; height: 100%; background: #27AE60;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Supplier Diversification</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Planning: 30%</span>
+            </div>
+            <div style="width: 100%; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden;">
+              <div style="width: 30%; height: 100%; background: #3498DB;"></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Compliance Documentation</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Completed: 92%</span>
+            </div>
+            <div style="width: 100%; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden;">
+              <div style="width: 92%; height: 100%; background: #27AE60;"></div>
+            </div>
+          </div>
+        </div>
+        <a href="../risk-advisor/mitigation.html" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; justify-content: center;">View Mitigation Plans</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wf-label">WIREFRAME — Mastiyo AI-Powered BI Platform</div>
+
+</body>
+</html>

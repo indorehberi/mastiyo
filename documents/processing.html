@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processing Queue - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Data Pipeline</div>
+      <a href="upload.html" class="nav-item"><span class="icon">📤</span> Upload</a>
+      <a href="list.html" class="nav-item"><span class="icon">📁</span> Library</a>
+      <a href="processing.html" class="nav-item active"><span class="icon">⚙️</span> Queue</a>
+      <div class="nav-section">Analysis</div>
+      <a href="../dashboard/kpi-overview.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="breadcrumb">Data Pipeline • <strong>Processing Queue</strong></div>
+      <div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div>
+    </header>
+    <div class="page-content">
+      <h1 class="page-title">Processing Queue</h1>
+      <p class="page-subtitle">Real-time document processing status and OCR jobs</p>
+
+      <!-- Queue Stats -->
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label">Processing</div><div class="kpi-value">3</div></div>
+        <div class="kpi-card"><div class="kpi-label">Completed Today</div><div class="kpi-value">24</div></div>
+        <div class="kpi-card warning"><div class="kpi-label">Errors</div><div class="kpi-value">2</div></div>
+        <div class="kpi-card"><div class="kpi-label">Avg Time</div><div class="kpi-value">2.5m</div></div>
+      </div>
+
+      <!-- Active Jobs -->
+      <div class="card">
+        <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Active Processing Jobs</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="progress-card">
+            <div class="progress-card-header">
+              <span class="progress-card-title">Receipt_Scan_20260115.tiff - OCR</span>
+              <span class="progress-percentage">65%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-bar-fill" style="width: 65%;"></div></div>
+          </div>
+          <div class="progress-card">
+            <div class="progress-card-header">
+              <span class="progress-card-title">Statement_Jan2026.xlsx - Data Extract</span>
+              <span class="progress-percentage">45%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-bar-fill" style="width: 45%;"></div></div>
+          </div>
+          <div class="progress-card">
+            <div class="progress-card-header">
+              <span class="progress-card-title">Invoice_Set_5.pdf - Validation</span>
+              <span class="progress-percentage">80%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-bar-fill success" style="width: 80%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Completions -->
+      <div class="card">
+        <h3 style="margin-bottom: 1rem;">Completed (Last 24h)</h3>
+        <table>
+          <thead>
+            <tr><th>Document</th><th>Type</th><th>Duration</th><th>Status</th><th>Confidence</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Invoice_Jan2026_001.pdf</strong></td>
+              <td>Invoice</td>
+              <td>2.3 min</td>
+              <td><span class="status-badge status-success">✓ Success</span></td>
+              <td>98%</td>
+            </tr>
+            <tr>
+              <td><strong>Financial_Statement_Q4_2025.xlsx</strong></td>
+              <td>Financial</td>
+              <td>3.1 min</td>
+              <td><span class="status-badge status-success">✓ Success</span></td>
+              <td>95%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

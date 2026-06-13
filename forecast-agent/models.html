@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast Models - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><div class="sidebar-role">OWNER</div><nav class="sidebar-nav"><div class="nav-section">Forecast Agent</div><a href="models.html" class="nav-item active"><span class="icon">📈</span> Models</a><a href="scenarios.html" class="nav-item"><span class="icon">🎯</span> Scenarios</a><a href="predictions.html" class="nav-item"><span class="icon">🔮</span> Predictions</a><a href="performance.html" class="nav-item"><span class="icon">📊</span> Performance</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Advanced AI • <strong>Forecast Agent Models</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Forecasting Models</h1>
+      <p class="page-subtitle">Advanced ML models for revenue, expense, and cash flow forecasting</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="card">
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">ARIMA Time Series</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Autoregressive Integrated Moving Average</p>
+          <div style="background: var(--bg); padding: 1rem; border-radius: 4px; margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Accuracy (MAPE)</strong><span>8.2%</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Best For</strong><span>Seasonal trends</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;"><strong>Horizon</strong><span>6 months</span></div>
+          </div>
+          <button class="btn btn-secondary btn-sm" style="width: 100%;" onclick="alert('ARIMA model selected')">Use Model</button>
+        </div>
+
+        <div class="card">
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Prophet (Facebook)</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Additive seasonal decomposition</p>
+          <div style="background: var(--bg); padding: 1rem; border-radius: 4px; margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Accuracy (MAPE)</strong><span>7.5%</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Best For</strong><span>Business cycles</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;"><strong>Horizon</strong><span>12 months</span></div>
+          </div>
+          <button class="btn btn-secondary btn-sm" style="width: 100%;" onclick="alert('Prophet model selected')">Use Model</button>
+        </div>
+
+        <div class="card">
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">XGBoost Ensemble</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Gradient boosting with external features</p>
+          <div style="background: var(--bg); padding: 1rem; border-radius: 4px; margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Accuracy (MAPE)</strong><span>6.8%</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Best For</strong><span>Complex patterns</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;"><strong>Horizon</strong><span>9 months</span></div>
+          </div>
+          <button class="btn btn-secondary btn-sm" style="width: 100%; background: var(--primary);" onclick="alert('XGBoost model selected')">Use Model (Recommended)</button>
+        </div>
+
+        <div class="card">
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">LSTM Neural Network</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Long Short-Term Memory RNN</p>
+          <div style="background: var(--bg); padding: 1rem; border-radius: 4px; margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Accuracy (MAPE)</strong><span>9.1%</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Best For</strong><span>Long sequences</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;"><strong>Horizon</strong><span>18 months</span></div>
+          </div>
+          <button class="btn btn-secondary btn-sm" style="width: 100%;" onclick="alert('LSTM model selected')">Use Model</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Currently Active Models</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Model</th><th>Metric</th><th>Horizon</th><th>Last Updated</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>XGBoost (Revenue)</strong></td><td>MAPE: 6.8%</td><td>9 months</td><td>2026-06-10</td><td><span class="badge badge-success">Active</span></td></tr>
+            <tr><td><strong>Prophet (Cash Flow)</strong></td><td>MAPE: 7.5%</td><td>12 months</td><td>2026-06-09</td><td><span class="badge badge-success">Active</span></td></tr>
+            <tr><td><strong>ARIMA (Expenses)</strong></td><td>MAPE: 8.2%</td><td>6 months</td><td>2026-06-11</td><td><span class="badge badge-success">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

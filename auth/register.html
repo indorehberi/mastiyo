@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-public">
+  
+  <header class="pub-header">
+    <div class="logo">📊 Mastiyo</div>
+    <a href="../index.html" class="btn btn-outline" style="color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3);">Back to Home</a>
+  </header>
+
+  <main style="display: flex; align-items: center; justify-content: center; flex: 1;">
+    
+    <div class="card" style="max-width: 450px; width: 100%; box-shadow: var(--shadow-md);">
+      
+      <h1 style="text-align: center; margin-bottom: 0.5rem;">Create Account</h1>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Start your AI-powered business intelligence journey</p>
+
+      <form id="registerForm" style="display: flex; flex-direction: column; gap: 1rem;">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label required">First Name</label>
+            <input type="text" class="form-control" placeholder="John" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label required">Last Name</label>
+            <input type="text" class="form-control" placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label required">Email Address</label>
+          <input type="email" class="form-control" placeholder="john@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label required">Organization Name</label>
+          <input type="text" class="form-control" placeholder="PT Maju Jaya" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label required">Password</label>
+          <input type="password" class="form-control" placeholder="Min. 8 characters" required>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">
+            Must contain uppercase, lowercase, number, and special character
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label required">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Confirm your password" required>
+        </div>
+
+        <div class="form-check-label">
+          <input type="checkbox" class="form-checkbox" id="terms" required>
+          <label for="terms" style="margin: 0; cursor: pointer;">
+            I agree to the <a href="#" style="color: var(--primary-light);">Terms of Service</a> and <a href="#" style="color: var(--primary-light);">Privacy Policy</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.8rem; margin-top: 0.5rem;">
+          Create Account
+        </button>
+
+      </form>
+
+      <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+        <p style="color: var(--text-muted);">
+          Already have an account? <a href="login.html" style="color: var(--primary-light); font-weight: 600;">Sign in here</a>
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer style="background: var(--primary); color: white; text-align: center; padding: 1.5rem;">
+    <p>© 2026 Mastiyo. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('✅ Account created successfully! Proceeding to configuration...');
+      window.location.href = '../dashboard/main.html';
+    });
+  </script>
+
+</body>
+</html>

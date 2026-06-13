@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Assessments - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><div class="sidebar-role">OWNER</div><nav class="sidebar-nav"><div class="nav-section">Risk Advisor</div><a href="assessments.html" class="nav-item active"><span class="icon">✅</span> Assessments</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Advanced AI • Risk Advisor • <strong>Risk Assessments</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Detailed Risk Assessments</h1>
+      <p class="page-subtitle">Comprehensive analysis of identified enterprise risks</p>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+        <div class="card" style="border-left: 4px solid #E74C3C;">
+          <h3>1. High A/R Concentration (CRITICAL)</h3>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0;">
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Probability</div><div style="font-size: 1.5rem; font-weight: 700; color: #E74C3C;">92%</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Impact</div><div style="font-size: 1.5rem; font-weight: 700; color: #E74C3C;">Rp 5.2B</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Risk Score</div><div style="font-size: 1.5rem; font-weight: 700; color: #E74C3C;">9.2/10</div></div>
+          </div>
+          <p style="margin: 1rem 0; color: var(--text);"><strong>Description:</strong> RSUD Bandung represents 31% of total A/R (Rp 5.2B of Rp 2.1B). Default would be critical.</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;"><strong>Contributing Factors:</strong> Single large customer, 28-day DSO, payment terms 60 days</p>
+          <button class="btn btn-secondary btn-sm" onclick="alert('Full assessment opened')">View Full Assessment</button>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #E74C3C;">
+          <h3>2. Supplier Dependence (HIGH)</h3>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0;">
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Probability</div><div style="font-size: 1.5rem; font-weight: 700; color: #E74C3C;">78%</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Impact</div><div style="font-size: 1.5rem; font-weight: 700; color: #E74C3C;">Rp 2.0B</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Risk Score</div><div style="font-size: 1.5rem; font-weight: 700; color: #E74C3C;">8.1/10</div></div>
+          </div>
+          <p style="margin: 1rem 0; color: var(--text);"><strong>Description:</strong> Top 3 suppliers represent 58% of COGS. Supply chain disruption would halt operations.</p>
+          <button class="btn btn-secondary btn-sm" onclick="alert('Full assessment opened')">View Full Assessment</button>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #F39C12;">
+          <h3>3. Interest Rate Risk (HIGH)</h3>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0;">
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Probability</div><div style="font-size: 1.5rem; font-weight: 700; color: #F39C12;">65%</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Impact</div><div style="font-size: 1.5rem; font-weight: 700; color: #F39C12;">Rp 450M</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Risk Score</div><div style="font-size: 1.5rem; font-weight: 700; color: #F39C12;">6.8/10</div></div>
+          </div>
+          <p style="margin: 1rem 0; color: var(--text);"><strong>Description:</strong> Rp 27.5B floating rate debt. Rate rise of 2% = Rp 50M annual interest cost increase.</p>
+          <button class="btn btn-secondary btn-sm" onclick="alert('Full assessment opened')">View Full Assessment</button>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #F39C12;">
+          <h3>4. Currency Fluctuation (MEDIUM-HIGH)</h3>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0;">
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Probability</div><div style="font-size: 1.5rem; font-weight: 700; color: #F39C12;">72%</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Impact</div><div style="font-size: 1.5rem; font-weight: 700; color: #F39C12;">Rp 180M</div></div>
+            <div><div style="font-size: 0.85rem; color: var(--text-muted);">Risk Score</div><div style="font-size: 1.5rem; font-weight: 700; color: #F39C12;">6.2/10</div></div>
+          </div>
+          <p style="margin: 1rem 0; color: var(--text);"><strong>Description:</strong> 8% of COGS imported in USD. Rupiah depreciation would impact margins.</p>
+          <button class="btn btn-secondary btn-sm" onclick="alert('Full assessment opened')">View Full Assessment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

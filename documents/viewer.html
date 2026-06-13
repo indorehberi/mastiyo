@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Viewer - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Data Pipeline</div>
+      <a href="upload.html" class="nav-item"><span class="icon">📤</span> Upload</a>
+      <a href="list.html" class="nav-item"><span class="icon">📁</span> Library</a>
+      <a href="viewer.html" class="nav-item active"><span class="icon">👁️</span> Viewer</a>
+      <a href="processing.html" class="nav-item"><span class="icon">⚙️</span> Queue</a>
+      <div class="nav-section">Analysis</div>
+      <a href="../dashboard/kpi-overview.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+      <a href="../ai-intelligence/insights.html" class="nav-item"><span class="icon">💡</span> Insights</a>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="breadcrumb"><a href="list.html">Library</a> • <strong>Invoice_Jan2026_001.pdf</strong></div>
+      <div class="topbar-right">
+        <div class="notif-bell">🔔</div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+    <div class="page-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h1 class="page-title">Document Viewer</h1>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-secondary">📥 Download</button>
+          <button class="btn btn-secondary">🔄 Re-Process</button>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <div>
+          <!-- Document Preview -->
+          <div class="card" style="padding: 0; overflow: hidden; height: 600px;">
+            <div style="background: var(--text); padding: 2rem; text-align: center; color: white; height: 100%; display: flex; align-items: center; justify-content: center;">
+              📄 PDF Preview<br/>
+              <span style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">Document display would appear here</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Extracted Data -->
+          <div class="card">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">✓ Extracted Data</h3>
+            <ul class="list-group" style="font-size: 0.9rem;">
+              <li>
+                <strong>Invoice Number</strong>
+                <p style="color: var(--text-muted); margin: 0.25rem 0 0 0;">INV-2026-001</p>
+              </li>
+              <li>
+                <strong>Date</strong>
+                <p style="color: var(--text-muted); margin: 0.25rem 0 0 0;">January 15, 2026</p>
+              </li>
+              <li>
+                <strong>Vendor</strong>
+                <p style="color: var(--text-muted); margin: 0.25rem 0 0 0;">PT Supplier ABC</p>
+              </li>
+              <li>
+                <strong>Amount</strong>
+                <p style="color: var(--text-muted); margin: 0.25rem 0 0 0;">Rp 5,450,000</p>
+              </li>
+              <li>
+                <strong>Due Date</strong>
+                <p style="color: var(--text-muted); margin: 0.25rem 0 0 0;">February 15, 2026</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- OCR Status -->
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">OCR Quality</h3>
+            <div class="progress-card">
+              <div class="progress-card-header">
+                <span class="progress-card-title">Overall Confidence</span>
+                <span class="progress-percentage">98%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill success" style="width: 98%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

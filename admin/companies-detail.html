@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Detail - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/main.html" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <div class="nav-section">Management</div>
+      <a href="users-list.html" class="nav-item">
+        <span class="icon">👥</span> Users
+      </a>
+      <a href="companies-list.html" class="nav-item active">
+        <span class="icon">🏢</span> Companies
+      </a>
+      <a href="roles-list.html" class="nav-item">
+        <span class="icon">👮</span> Roles
+      </a>
+      <div class="nav-section">Operations</div>
+      <a href="audit-logs.html" class="nav-item">
+        <span class="icon">📋</span> Audit Logs
+      </a>
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb"><a href="companies-list.html">Companies</a> • <strong>PT APM</strong></div>
+      <div class="topbar-right">
+        <div class="notif-bell">🔔</div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h1 class="page-title">PT APM</h1>
+          <p class="page-subtitle">Laboratory Equipment • Active Status</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-secondary btn-sm">Edit</button>
+          <button class="btn btn-danger btn-sm">Archive</button>
+        </div>
+      </div>
+
+      <!-- Company Info & User Access -->
+      <div class="grid-2-1">
+        
+        <div>
+          <!-- Basic Info -->
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Company Information</h3>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Industry</p>
+                <p style="font-weight: 600;">Laboratory Equipment</p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Business Model</p>
+                <p style="font-weight: 600;">B2B Sales</p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Status</p>
+                <p><span class="badge badge-success">Active</span></p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Created</p>
+                <p style="font-weight: 600;">January 15, 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPIs -->
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Performance</h3>
+            <div class="kpi-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+              <div class="kpi-card success" style="padding: 1rem;">
+                <div class="kpi-label">YTD Revenue</div>
+                <div class="kpi-value" style="font-size: 1.5rem;">Rp 27.5B</div>
+              </div>
+              <div class="kpi-card" style="padding: 1rem;">
+                <div class="kpi-label">YTD Profit</div>
+                <div class="kpi-value" style="font-size: 1.5rem;">Rp 10.19B</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- User Access Control -->
+          <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+              <h3 style="margin: 0; color: var(--primary);">User Access (5)</h3>
+              <button class="btn btn-primary btn-sm">+ Grant Access</button>
+            </div>
+            
+            <ul class="list-group" style="font-size: 0.9rem;">
+              <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--bg); border-radius: 4px; margin-bottom: 0.5rem;">
+                <div>
+                  <strong>John Doe</strong>
+                  <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">john@ptapm.com</p>
+                </div>
+                <span class="badge badge-primary">FULL</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--bg); border-radius: 4px; margin-bottom: 0.5rem;">
+                <div>
+                  <strong>Sarah Johnson</strong>
+                  <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">sarah@ptapm.com</p>
+                </div>
+                <span class="badge badge-info">LIMITED</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--bg); border-radius: 4px; margin-bottom: 0.5rem;">
+                <div>
+                  <strong>Budi Santoso</strong>
+                  <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">budi@company.com</p>
+                </div>
+                <span class="badge">READ-ONLY</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--bg); border-radius: 4px; margin-bottom: 0.5rem;">
+                <div>
+                  <strong>Rina Wijaya</strong>
+                  <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">rina@company.com</p>
+                </div>
+                <span class="badge badge-success">FULL</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--bg); border-radius: 4px;">
+                <div>
+                  <strong>Ahmad Rahman</strong>
+                  <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">ahmad@company.com</p>
+                </div>
+                <span class="badge badge-info">LIMITED</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

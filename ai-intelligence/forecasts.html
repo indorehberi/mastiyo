@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecasts - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="forecasts.html" class="nav-item active"><span class="icon">🔮</span> Forecasts</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Analysis • <strong>AI Forecasts</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Forecast Models</h1>
+      <p class="page-subtitle">ARIMA, Prophet, XGBoost, LSTM ensemble predictions</p>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div class="tabs"><button class="tab active">ARIMA</button><button class="tab">Prophet</button><button class="tab">XGBoost</button><button class="tab">LSTM</button></div>
+      </div>
+
+      <div class="card">
+        <h3>Revenue Forecast (Next 12M)</h3>
+        <div class="chart-container"><div class="chart-placeholder">📊 Forecast: Historical + Projected + CI bands</div></div>
+        <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+          <div><strong>Next Month (Feb 2026)</strong><p>Rp 2.8B (confidence: 95%)</p></div>
+          <div><strong>Next Q (Q1 2026)</strong><p>Rp 7.2B (confidence: 92%)</p></div>
+          <div><strong>Confidence Interval (80%)</strong><p>Rp 2.6B - Rp 3.0B</p></div>
+          <div><strong>Confidence Interval (95%)</strong><p>Rp 2.4B - Rp 8.0B</p></div>
+        </div>
+      </div>
+
+      <div class="grid-1-1">
+        <div class="card">
+          <h3>Best Case Scenario</h3>
+          <p style="font-size: 0.85rem; color: var(--success);">↑ Rp 8.0B<br/>Assume cost optimization + market expansion</p>
+        </div>
+        <div class="card">
+          <h3>Base Case</h3>
+          <p style="font-size: 0.85rem;">→ Rp 2.8B<br/>Current trend continuation</p>
+        </div>
+        <div class="card">
+          <h3>Worst Case</h3>
+          <p style="font-size: 0.85rem; color: var(--danger);">↓ Rp 2.2B<br/>Economic downturn + customer loss</p>
+        </div>
+        <div class="card">
+          <h3>Model Accuracy</h3>
+          <p style="font-size: 0.85rem;">MAPE: 4.2%<br/>R² Score: 0.94</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

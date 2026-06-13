@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Operations Manager - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OPERATIONS MANAGER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/operations-manager.html" class="nav-item active">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      
+      <div class="nav-section">Document Management</div>
+      <a href="../documents/upload.html" class="nav-item">
+        <span class="icon">📤</span> Upload
+      </a>
+      <a href="../documents/list.html" class="nav-item">
+        <span class="icon">📚</span> Library
+      </a>
+      <a href="../documents/viewer.html" class="nav-item">
+        <span class="icon">👁️</span> Viewer
+      </a>
+      <a href="../documents/processing.html" class="nav-item">
+        <span class="icon">⏳</span> Processing Queue
+      </a>
+      <a href="../documents/history.html" class="nav-item">
+        <span class="icon">📝</span> History
+      </a>
+
+      <div class="nav-section">Data Pipeline</div>
+      <a href="../data-pipeline/extraction.html" class="nav-item">
+        <span class="icon">🔄</span> Extraction
+      </a>
+      <a href="../data-pipeline/mapping.html" class="nav-item">
+        <span class="icon">🗺️</span> Mapping
+      </a>
+      <a href="../data-pipeline/validation.html" class="nav-item">
+        <span class="icon">✅</span> Validation
+      </a>
+
+      <div class="nav-section">Quality Assurance</div>
+      <a href="../data-quality/dashboard.html" class="nav-item">
+        <span class="icon">📊</span> QA Dashboard
+      </a>
+      <a href="../data-quality/validation-rules.html" class="nav-item">
+        <span class="icon">📋</span> Rules
+      </a>
+      <a href="../data-quality/reconciliation.html" class="nav-item">
+        <span class="icon">🔄</span> Reconciliation
+      </a>
+
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Operations Manager • <strong>Dashboard</strong></div>
+      <div class="topbar-right">
+        <input type="text" class="search-box" placeholder="Search...">
+        <div class="notif-bell">🔔<div class="dot"></div></div>
+        <div class="user-avatar">OM</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Operations Dashboard</h1>
+      <p class="page-subtitle">PT APM Data Pipeline & Quality Management</p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card success">
+          <div class="kpi-label">Documents Processed</div>
+          <div class="kpi-value">1,247</div>
+          <div class="kpi-trend up">↑ This month</div>
+        </div>
+        <div class="kpi-card gold">
+          <div class="kpi-label">Avg Processing Time</div>
+          <div class="kpi-value">2.3 min</div>
+          <div class="kpi-trend">Per document</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Data Quality Score</div>
+          <div class="kpi-value">94.8%</div>
+          <div class="kpi-trend up">↑ Excellent</div>
+        </div>
+        <div class="kpi-card" style="border-color: #E67E22; background: rgba(230, 126, 34, 0.05);">
+          <div class="kpi-label">Queue Backlog</div>
+          <div class="kpi-value">23</div>
+          <div class="kpi-trend text-warning">Processing</div>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <div class="card">
+          <div class="card-header">OCR Pipeline Status</div>
+          <div style="padding: 1rem;">
+            <div style="margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.85rem; font-weight: 600;">Upload Phase</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">342 docs</span>
+              </div>
+              <div style="width: 100%; height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden;">
+                <div style="width: 85%; height: 100%; background: #27AE60;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.85rem; font-weight: 600;">OCR Processing</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">234 docs</span>
+              </div>
+              <div style="width: 100%; height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden;">
+                <div style="width: 58%; height: 100%; background: #F39C12;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.85rem; font-weight: 600;">Validation</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">127 docs</span>
+              </div>
+              <div style="width: 100%; height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden;">
+                <div style="width: 40%; height: 100%; background: #3498DB;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.85rem; font-weight: 600;">Completed</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">1,247 docs</span>
+              </div>
+              <div style="width: 100%; height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden;">
+                <div style="width: 100%; height: 100%; background: #27AE60;"></div>
+              </div>
+            </div>
+          </div>
+          <a href="../documents/processing.html" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; justify-content: center;">View Queue</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Data Quality Issues</div>
+          <div style="padding: 1rem;">
+            <div style="margin-bottom: 1rem; padding: 0.75rem; background: rgba(52, 73, 94, 0.1); border-radius: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 600; font-size: 0.9rem;">Missing Required Fields</span>
+                <span style="background: #E74C3C; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: bold;">12</span>
+              </div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">2.4% of processed documents</p>
+            </div>
+            <div style="margin-bottom: 1rem; padding: 0.75rem; background: rgba(230, 126, 34, 0.1); border-radius: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 600; font-size: 0.9rem;">Format Inconsistencies</span>
+                <span style="background: #F39C12; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: bold;">8</span>
+              </div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Data mapping mismatches</p>
+            </div>
+            <div style="padding: 0.75rem; background: rgba(46, 204, 113, 0.1); border-radius: 4px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 600; font-size: 0.9rem;">Validation Passed</span>
+                <span style="background: #27AE60; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: bold;">94.8%</span>
+              </div>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">1,178 documents approved</p>
+            </div>
+          </div>
+          <a href="../data-quality/dashboard.html" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; justify-content: center;">Quality Details</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">Recent Processing Activity</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Document</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Upload Time</th>
+                <th>Processing Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Invoice_APM_2024_06.pdf</strong></td>
+                <td>Invoice</td>
+                <td><span class="badge badge-success">Validated</span></td>
+                <td>2024-06-12 10:30</td>
+                <td>2.1 min</td>
+              </tr>
+              <tr>
+                <td><strong>PO_2024_001485.pdf</strong></td>
+                <td>PO</td>
+                <td><span class="badge badge-success">Validated</span></td>
+                <td>2024-06-12 09:45</td>
+                <td>1.8 min</td>
+              </tr>
+              <tr>
+                <td><strong>Receipt_Collection_12.xlsx</strong></td>
+                <td>Collection</td>
+                <td><span class="badge badge-warning">Processing</span></td>
+                <td>2024-06-12 11:20</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><strong>MonthlyReport_May.pdf</strong></td>
+                <td>Report</td>
+                <td><span class="badge badge-info">Uploaded</span></td>
+                <td>2024-06-12 11:35</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wf-label">WIREFRAME — Mastiyo AI-Powered BI Platform</div>
+
+</body>
+</html>

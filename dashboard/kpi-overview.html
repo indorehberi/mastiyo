@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPI Dashboard - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Analysis</div>
+      <a href="kpi-overview.html" class="nav-item active"><span class="icon">📊</span> KPI Overview</a>
+      <a href="kpi-targets.html" class="nav-item"><span class="icon">🎯</span> vs Targets</a>
+      <a href="trends.html" class="nav-item"><span class="icon">📈</span> Trends</a>
+      <a href="alerts.html" class="nav-item"><span class="icon">⚠️</span> Alerts</a>
+      <a href="multi-company.html" class="nav-item"><span class="icon">🏢</span> Multi-Co</a>
+      <div class="nav-section">Reports</div>
+      <a href="../reports/list.html" class="nav-item"><span class="icon">📋</span> Reports</a>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="breadcrumb">Analysis • <strong>KPI Dashboard</strong></div>
+      <div class="topbar-right"><input type="text" class="search-box" placeholder="Search..."><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div>
+    </header>
+    <div class="page-content">
+      <h1 class="page-title">KPI Dashboard</h1>
+      <p class="page-subtitle">Real-time Key Performance Indicators • PT APM • Last update: 2 min ago</p>
+
+      <!-- Real-time KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-card success">
+          <div class="kpi-label">Revenue / Sales</div>
+          <div class="kpi-value">Rp 27.5B</div>
+          <div class="kpi-trend up">Target Real 2026: 31B</div>
+        </div>
+        <div class="kpi-card success">
+          <div class="kpi-label">Gross Profit</div>
+          <div class="kpi-value">Rp 10.19B</div>
+          <div class="kpi-trend up">Target 2026: 11B</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">COGS</div>
+          <div class="kpi-value">Rp 17.3B</div>
+          <div class="kpi-trend down">Target 2026: 20B Cost</div>
+        </div>
+        <div class="kpi-card warning">
+          <div class="kpi-label">Forecast Des 2025</div>
+          <div class="kpi-value">Rp 5.2B</div>
+          <div class="kpi-trend up">Deal PO Potensial 3.64B</div>
+        </div>
+      </div>
+
+      <div class="grid-1-1">
+        <!-- Revenue Trend -->
+        <div class="card">
+          <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Monthly Revenue Trend</h3>
+          <div class="chart-container">
+            <div class="chart-placeholder">📊 Revenue Chart (12-month trend)</div>
+          </div>
+          <ul class="list-group" style="font-size: 0.85rem;">
+            <li style="padding: 0.5rem; border: none;">
+              <strong>Avg Monthly</strong>: Rp 2.3B | <strong>Projection</strong>: Rp 2.6B next month
+            </li>
+          </ul>
+        </div>
+
+        <!-- Top Metrics -->
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem;">Quick Metrics</h3>
+          <ul class="list-group" style="font-size: 0.9rem;">
+            <li>
+              <strong>Profit Margin</strong>
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">22% • Target: 25%</p>
+            </li>
+            <li>
+              <strong>Customer Count</strong>
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">1,245 • +3.2% YoY</p>
+            </li>
+            <li>
+              <strong>Avg Order Value</strong>
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">Rp 2.1M • +8.5%</p>
+            </li>
+            <li>
+              <strong>DSO (Days Sales O/S)</strong>
+              <p style="color: var(--text-muted); margin: 0.2rem 0 0 0; font-size: 0.8rem;">28 days • Target: 25</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Real-time Activity -->
+      <div class="card">
+        <h3 style="margin-bottom: 1rem;">Real-time Activity</h3>
+        <ul class="list-group" style="font-size: 0.85rem;">
+          <li>💰 Invoice #INV-2026-001 marked as paid - Rp 52M</li>
+          <li>📥 New PO received from RS Pemerintah - Rp 120M</li>
+          <li>✓ Expense approval completed - Rp 4.5M</li>
+          <li>🔔 Stock alert: Mesin HD inventory at 12 units (low stock warning)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

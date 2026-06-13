@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Quality - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="dashboard.html" class="nav-item active"><span class="icon">📊</span> Dashboard</a><a href="validation-rules.html" class="nav-item"><span class="icon">⚙️</span> Rules</a><a href="reconciliation.html" class="nav-item"><span class="icon">🔄</span> Reconcile</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Quality • <strong>Dashboard</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Data Quality Dashboard</h1>
+      <p class="page-subtitle">Quality metrics across all data sources</p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card success">
+          <div class="kpi-label">Quality Score</div>
+          <div class="kpi-value">94%</div>
+          <div class="progress-bar" style="width: 100%;"><div class="progress-bar-fill success" style="width: 94%;"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Completeness</div>
+          <div class="kpi-value">96%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Accuracy</div>
+          <div class="kpi-value">92%</div>
+        </div>
+        <div class="kpi-card warning">
+          <div class="kpi-label">Issues</div>
+          <div class="kpi-value">45</div>
+        </div>
+      </div>
+
+      <div class="grid-1-1">
+        <div class="card">
+          <h3>Quality by Dimension</h3>
+          <ul class="list-group" style="font-size: 0.85rem;">
+            <li><strong>Timeliness</strong>: 98% (data updated within SLA)</li>
+            <li><strong>Consistency</strong>: 89% (duplicate/conflict detection)</li>
+            <li><strong>Validity</strong>: 94% (format compliance)</li>
+            <li><strong>Integrity</strong>: 91% (referential integrity)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Top Issues</h3>
+          <ul class="list-group" style="font-size: 0.85rem;">
+            <li>12 duplicate customer records</li>
+            <li>8 invoice amounts mismatched</li>
+            <li>15 incomplete vendor data</li>
+            <li>10 date format inconsistencies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

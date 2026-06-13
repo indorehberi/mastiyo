@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Results - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="validation.html" class="nav-item active"><span class="icon">✓</span> Validation</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Pipeline • <strong>Validation</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Validation Results</h1>
+      <p class="page-subtitle">127 documents processed • 124 passed, 3 require manual review</p>
+
+      <div class="kpi-grid" style="margin-bottom: 1.5rem;">
+        <div class="kpi-card success"><div class="kpi-label">Passed</div><div class="kpi-value">124</div></div>
+        <div class="kpi-card warning"><div class="kpi-label">Review</div><div class="kpi-value">3</div></div>
+        <div class="kpi-card"><div class="kpi-label">Pass Rate</div><div class="kpi-value">97.6%</div></div>
+      </div>
+
+      <div class="card">
+        <h3>Documents Requiring Review</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Document</th><th>Issue</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Invoice_Jan2026_002.pdf</td><td>Tax amount mismatch (89% confidence)</td><td><button class="btn btn-secondary btn-sm">Review</button></td></tr>
+            <tr><td>Statement_Dec2025_15.xlsx</td><td>Missing required field: PO#</td><td><button class="btn btn-secondary btn-sm">Review</button></td></tr>
+            <tr><td>Receipt_20260119.tiff</td><td>Currency conversion needed</td><td><button class="btn btn-secondary btn-sm">Review</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button class="btn btn-primary" onclick="alert('All documents approved and synced to database')">Approve & Sync All</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

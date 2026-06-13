@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Advisor Dashboard - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><div class="sidebar-role">OWNER</div><nav class="sidebar-nav"><div class="nav-section">Risk Advisor</div><a href="dashboard.html" class="nav-item active"><span class="icon">⚠️</span> Dashboard</a><a href="risk-matrix.html" class="nav-item"><span class="icon">📊</span> Risk Matrix</a><a href="assessments.html" class="nav-item"><span class="icon">✅</span> Assessments</a><a href="mitigation.html" class="nav-item"><span class="icon">🛡️</span> Mitigation</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Advanced AI • <strong>Risk Advisor Dashboard</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Enterprise Risk Dashboard</h1>
+      <p class="page-subtitle">AI-powered risk assessment and monitoring</p>
+
+      <div class="kpi-grid" style="margin-bottom: 2rem;">
+        <div class="kpi-card danger"><div class="kpi-label">Overall Risk Score</div><div class="kpi-value">6.8/10</div><div style="font-size: 0.8rem; color: #C0392B; margin-top: 0.3rem;">Moderate-High Risk</div></div>
+        <div class="kpi-card"><div class="kpi-label">Critical Risks</div><div class="kpi-value">3</div></div>
+        <div class="kpi-card"><div class="kpi-label">High Risks</div><div class="kpi-value">7</div></div>
+        <div class="kpi-card success"><div class="kpi-label">Mitigation Rate</div><div class="kpi-value">68%</div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>📊 Risk Categories (AI Assessment)</h3>
+          <table style="font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Financial Risk</strong></td><td style="text-align: right;"><span class="badge badge-danger">7.5/10</span></td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Operational Risk</strong></td><td style="text-align: right;"><span class="badge" style="background: #F39C12; color: white;">6.2/10</span></td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Market Risk</strong></td><td style="text-align: right;"><span class="badge" style="background: #F39C12; color: white;">5.8/10</span></td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Compliance Risk</strong></td><td style="text-align: right;"><span class="badge badge-success">3.2/10</span></td></tr>
+            <tr><td><strong>Strategic Risk</strong></td><td style="text-align: right;"><span class="badge" style="background: #F39C12; color: white;">6.1/10</span></td></tr>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Top Risks (Priority Order)</h3>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><strong style="font-size: 0.9rem;">1. High A/R Concentration</strong><span class="badge badge-danger">Critical</span></div>
+            <div style="background: var(--bg); height: 8px; border-radius: 4px;"><div style="background: #E74C3C; height: 100%; width: 85%; border-radius: 4px;"></div></div>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><strong style="font-size: 0.9rem;">2. Supplier Dependence</strong><span class="badge badge-danger">High</span></div>
+            <div style="background: var(--bg); height: 8px; border-radius: 4px;"><div style="background: #E74C3C; height: 100%; width: 72%; border-radius: 4px;"></div></div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><strong style="font-size: 0.9rem;">3. Interest Rate Risk</strong><span class="badge" style="background: #F39C12; color: white;">High</span></div>
+            <div style="background: var(--bg); height: 8px; border-radius: 4px;"><div style="background: #F39C12; height: 100%; width: 68%; border-radius: 4px;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <h3>Recent Risk Events</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Risk Event</th><th>Probability</th><th>Impact</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Currency Fluctuation</strong></td><td>72%</td><td>Rp 450M</td><td><span class="badge" style="background: #F39C12; color: white;">Monitoring</span></td></tr>
+            <tr><td><strong>Key Customer Default</strong></td><td>18%</td><td>Rp 5.2B</td><td><span class="badge badge-success">Low Risk</span></td></tr>
+            <tr><td><strong>Supply Chain Disruption</strong></td><td>45%</td><td>Rp 2.0B</td><td><span class="badge" style="background: #F39C12; color: white;">Mitigating</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

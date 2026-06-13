@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Version History - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Data Pipeline</div>
+      <a href="upload.html" class="nav-item"><span class="icon">📤</span> Upload</a>
+      <a href="list.html" class="nav-item"><span class="icon">📁</span> Library</a>
+      <a href="history.html" class="nav-item active"><span class="icon">📜</span> History</a>
+      <div class="nav-section">Analysis</div>
+      <a href="../dashboard/kpi-overview.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="breadcrumb">Data Pipeline • <strong>Version History</strong></div>
+      <div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div>
+    </header>
+    <div class="page-content">
+      <h1 class="page-title">Document Versions</h1>
+      <p class="page-subtitle">Track all document uploads and processing changes</p>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr><th>Document</th><th>Version</th><th>Upload Date</th><th>Status</th><th>Updated By</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Invoice_Jan2026_001.pdf</strong></td>
+              <td>v1.0</td>
+              <td>Jan 20, 10:30 AM</td>
+              <td><span class="badge badge-success">Final</span></td>
+              <td>John Doe</td>
+              <td><a href="viewer.html" class="btn btn-secondary btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td><strong>Financial_Statement.xlsx</strong></td>
+              <td>v1.0</td>
+              <td>Jan 20, 9:15 AM</td>
+              <td><span class="badge badge-success">Final</span></td>
+              <td>Sarah Johnson</td>
+              <td><a href="viewer.html" class="btn btn-secondary btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td><strong>Invoice_Jan2026_002.pdf</strong></td>
+              <td>v1.1</td>
+              <td>Jan 19, 3:45 PM</td>
+              <td><span class="badge">Corrected</span></td>
+              <td>John Doe</td>
+              <td><a href="viewer.html" class="btn btn-secondary btn-sm">View</a></td>
+            </tr>
+            <tr>
+              <td><strong>Invoice_Jan2026_002.pdf</strong></td>
+              <td>v1.0</td>
+              <td>Jan 19, 2:20 PM</td>
+              <td><span class="badge badge-danger">Replaced</span></td>
+              <td>John Doe</td>
+              <td><a href="viewer.html" class="btn btn-secondary btn-sm">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

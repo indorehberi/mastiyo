@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scenario Analysis - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><div class="sidebar-role">OWNER</div><nav class="sidebar-nav"><div class="nav-section">Forecast Agent</div><a href="scenarios.html" class="nav-item active"><span class="icon">🎯</span> Scenarios</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Advanced AI • Forecast Agent • <strong>Scenario Analysis</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Scenario Analysis</h1>
+      <p class="page-subtitle">What-if analysis for different business scenarios</p>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+        <div class="card" style="border-left: 4px solid #27AE60;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div><h3 style="margin: 0;">Base Case (Most Likely)</h3><p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0;">Probability: 60%</p></div>
+            <span class="badge badge-success">Expected</span>
+          </div>
+          <table style="font-size: 0.9rem; margin: 1rem 0;">
+            <tr><td><strong>Revenue (12M)</strong></td><td style="text-align: right;">Rp 56.8B (+6.5% YoY)</td></tr>
+            <tr><td><strong>Profit Margin</strong></td><td style="text-align: right;">22.3%</td></tr>
+            <tr><td><strong>Operating Cash</strong></td><td style="text-align: right;">Rp 12.4B</td></tr>
+            <tr style="background: var(--bg);"><td><strong>Assumptions</strong></td><td style="text-align: right;">No major market changes</td></tr>
+          </table>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #F39C12;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div><h3 style="margin: 0;">Upside Scenario</h3><p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0;">Probability: 25%</p></div>
+            <span class="badge" style="background: #F39C12; color: white;">Optimistic</span>
+          </div>
+          <table style="font-size: 0.9rem; margin: 1rem 0;">
+            <tr><td><strong>Revenue (12M)</strong></td><td style="text-align: right;">Rp 62.5B (+12% YoY)</td></tr>
+            <tr><td><strong>Profit Margin</strong></td><td style="text-align: right;">24.1%</td></tr>
+            <tr><td><strong>Operating Cash</strong></td><td style="text-align: right;">Rp 14.8B</td></tr>
+            <tr style="background: var(--bg);"><td><strong>Triggers</strong></td><td style="text-align: right;">Strong market demand, new customers</td></tr>
+          </table>
+          <button class="btn btn-secondary btn-sm" onclick="alert('Upside scenario details')">View Details</button>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #E74C3C;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div><h3 style="margin: 0;">Downside Scenario</h3><p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0;">Probability: 15%</p></div>
+            <span class="badge badge-danger">Pessimistic</span>
+          </div>
+          <table style="font-size: 0.9rem; margin: 1rem 0;">
+            <tr><td><strong>Revenue (12M)</strong></td><td style="text-align: right;">Rp 48.2B (+1% YoY)</td></tr>
+            <tr><td><strong>Profit Margin</strong></td><td style="text-align: right;">18.5%</td></tr>
+            <tr><td><strong>Operating Cash</strong></td><td style="text-align: right;">Rp 8.6B</td></tr>
+            <tr style="background: var(--bg);"><td><strong>Risks</strong></td><td style="text-align: right;">Market slowdown, key customer loss</td></tr>
+          </table>
+          <button class="btn btn-secondary btn-sm" onclick="alert('Downside scenario details')">View Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Scenario Comparison</h3>
+          <table style="font-size: 0.9rem;">
+            <thead><tr><th>Metric</th><th>Downside</th><th>Base Case</th><th>Upside</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Revenue</strong></td><td style="color: #E74C3C;">Rp 48.2B</td><td style="color: #F39C12;">Rp 56.8B</td><td style="color: #27AE60;">Rp 62.5B</td></tr>
+              <tr><td><strong>Profit Margin</strong></td><td style="color: #E74C3C;">18.5%</td><td style="color: #F39C12;">22.3%</td><td style="color: #27AE60;">24.1%</td></tr>
+              <tr><td><strong>Cash Flow</strong></td><td style="color: #E74C3C;">Rp 8.6B</td><td style="color: #F39C12;">Rp 12.4B</td><td style="color: #27AE60;">Rp 14.8B</td></tr>
+              <tr><td><strong>Probability</strong></td><td>15%</td><td>60%</td><td>25%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

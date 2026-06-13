@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastiyo — AI-Powered Business Intelligence Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #1B4F72; }
+    .index-wrap { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    .index-header { text-align: center; color: #fff; margin-bottom: 2.5rem; padding-top: 2rem; }
+    .index-header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .index-header p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 0.75rem; }
+    .index-header .badge-count { display: inline-block; background: #F39C12; color: #1B4F72; padding: 4px 14px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; }
+    .index-subtext { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 0.5rem; }
+    .area-section { margin-bottom: 2.5rem; }
+    .area-title { color: #F39C12; font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(255,255,255,0.15); text-transform: uppercase; letter-spacing: 1px; }
+    .page-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.7rem; }
+    .page-link {
+      display: block; padding: 0.8rem 1rem;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px; color: rgba(255,255,255,0.85);
+      text-decoration: none; font-size: 0.82rem; transition: all 0.15s;
+    }
+    .page-link:hover { 
+      background: rgba(255,255,255,0.15); color: #fff; text-decoration: none; 
+      border-color: rgba(255,255,255,0.25); transform: translateY(-2px);
+    }
+    .page-link .pg-id { 
+      color: #F39C12; font-weight: 700; margin-right: 0.3rem; 
+      display: inline-block; min-width: 20px;
+    }
+    .page-link .pg-name { font-weight: 500; }
+    .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .stat-card { background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); text-align: center; }
+    .stat-number { font-size: 1.8rem; font-weight: 700; color: #F39C12; }
+    .stat-label { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 0.3rem; }
+    .footer-note { 
+      text-align: center; color: rgba(255,255,255,0.3); font-size: 0.75rem; 
+      margin-top: 3rem; padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="index-wrap">
+
+    <div class="index-header">
+      <h1>📊 Mastiyo — AI-Powered BI Platform</h1>
+      <p>Satu Platform Terintegrasi untuk Finance Intelligence & AI-Powered Analytics</p>
+      <div class="badge-count">73 Halaman • 6 Role-Based Dashboard • 1 Unified Platform</div>
+      <div class="index-subtext">Complete wireframe system untuk development team | Organized by Role/Access Level</div>
+    </div>
+
+    <!-- STATISTICS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number">73</div>
+        <div class="stat-label">Total Screens</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Role-Based Areas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Feature Modules</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Complete</div>
+      </div>
+    </div>
+
+    <!-- AREA 1: AUTHENTICATION & PUBLIC -->
+    <div class="area-section">
+      <div class="area-title">🔐 Area 1 — Authentication (4 Screens)</div>
+      
+      <div class="page-grid">
+        <a href="auth/login.html" class="page-link"><span class="pg-id">A1</span><span class="pg-name">Login</span></a>
+        <a href="auth/register.html" class="page-link"><span class="pg-id">A2</span><span class="pg-name">Register</span></a>
+        <a href="auth/forgot-password.html" class="page-link"><span class="pg-id">A3</span><span class="pg-name">Forgot Password</span></a>
+        <a href="auth/reset-password.html" class="page-link"><span class="pg-id">A4</span><span class="pg-name">Reset Password</span></a>
+      </div>
+    </div>
+
+    <!-- AREA 2: OWNER / EXECUTIVE DASHBOARD -->
+    <div class="area-section">
+      <div class="area-title">👔 Area 2 — Owner / Executive Dashboard (13 Screens)</div>
+      
+      <!-- Main Dashboards -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Executive Dashboards (2 screens)</div>
+        <div class="page-grid">
+          <a href="dashboard/main.html" class="page-link"><span class="pg-id">E1</span><span class="pg-name">User Dashboard</span></a>
+          <a href="dashboard/admin.html" class="page-link"><span class="pg-id">E2</span><span class="pg-name">Executive Overview</span></a>
+        </div>
+      </div>
+
+      <!-- KPI & Performance -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">KPI & Performance Tracking (5 screens)</div>
+        <div class="page-grid">
+          <a href="dashboard/kpi-overview.html" class="page-link"><span class="pg-id">E3</span><span class="pg-name">KPI Overview</span></a>
+          <a href="dashboard/kpi-targets.html" class="page-link"><span class="pg-id">E4</span><span class="pg-name">vs Targets</span></a>
+          <a href="dashboard/trends.html" class="page-link"><span class="pg-id">E5</span><span class="pg-name">Trends</span></a>
+          <a href="dashboard/alerts.html" class="page-link"><span class="pg-id">E6</span><span class="pg-name">Alerts</span></a>
+          <a href="dashboard/multi-company.html" class="page-link"><span class="pg-id">E7</span><span class="pg-name">Multi-Company</span></a>
+        </div>
+      </div>
+
+      <!-- AI Intelligence -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">AI Intelligence & Insights (4 screens)</div>
+        <div class="page-grid">
+          <a href="ai-intelligence/analysis.html" class="page-link"><span class="pg-id">E8</span><span class="pg-name">Analysis</span></a>
+          <a href="ai-intelligence/insights.html" class="page-link"><span class="pg-id">E9</span><span class="pg-name">Insights</span></a>
+          <a href="ai-intelligence/agents.html" class="page-link"><span class="pg-id">E10</span><span class="pg-name">Agents</span></a>
+          <a href="ai-intelligence/forecasts.html" class="page-link"><span class="pg-id">E11</span><span class="pg-name">Forecasts</span></a>
+        </div>
+      </div>
+
+      <!-- Risk Management -->
+      <div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Risk Overview (2 screens)</div>
+        <div class="page-grid">
+          <a href="risk-advisor/dashboard.html" class="page-link"><span class="pg-id">E12</span><span class="pg-name">Risk Dashboard</span></a>
+          <a href="ai-cfo/dashboard.html" class="page-link"><span class="pg-id">E13</span><span class="pg-name">Financial Health</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AREA 3: FINANCE MANAGER -->
+    <div class="area-section">
+      <div class="area-title">💰 Area 3 — Finance Manager / CFO (8 Screens)</div>
+      
+      <!-- AI CFO -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">AI CFO — Financial Intelligence (4 screens)</div>
+        <div class="page-grid">
+          <a href="ai-cfo/dashboard.html" class="page-link"><span class="pg-id">F1</span><span class="pg-name">Dashboard</span></a>
+          <a href="ai-cfo/analysis.html" class="page-link"><span class="pg-id">F2</span><span class="pg-name">Financial Analysis</span></a>
+          <a href="ai-cfo/recommendations.html" class="page-link"><span class="pg-id">F3</span><span class="pg-name">Recommendations</span></a>
+          <a href="ai-cfo/alerts.html" class="page-link"><span class="pg-id">F4</span><span class="pg-name">Financial Alerts</span></a>
+        </div>
+      </div>
+
+      <!-- Forecast Agent -->
+      <div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Forecast Agent — Predictive Analytics (4 screens)</div>
+        <div class="page-grid">
+          <a href="forecast-agent/models.html" class="page-link"><span class="pg-id">F5</span><span class="pg-name">Models</span></a>
+          <a href="forecast-agent/scenarios.html" class="page-link"><span class="pg-id">F6</span><span class="pg-name">Scenarios</span></a>
+          <a href="forecast-agent/predictions.html" class="page-link"><span class="pg-id">F7</span><span class="pg-name">Predictions</span></a>
+          <a href="forecast-agent/performance.html" class="page-link"><span class="pg-id">F8</span><span class="pg-name">Performance</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AREA 4: OPERATIONS MANAGER -->
+    <div class="area-section">
+      <div class="area-title">⚙️ Area 4 — Operations Manager (11 Screens)</div>
+      
+      <!-- Document Management -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Document Management — OCR Pipeline (5 screens)</div>
+        <div class="page-grid">
+          <a href="documents/upload.html" class="page-link"><span class="pg-id">O1</span><span class="pg-name">Upload</span></a>
+          <a href="documents/list.html" class="page-link"><span class="pg-id">O2</span><span class="pg-name">Library</span></a>
+          <a href="documents/viewer.html" class="page-link"><span class="pg-id">O3</span><span class="pg-name">Viewer</span></a>
+          <a href="documents/processing.html" class="page-link"><span class="pg-id">O4</span><span class="pg-name">Queue</span></a>
+          <a href="documents/history.html" class="page-link"><span class="pg-id">O5</span><span class="pg-name">History</span></a>
+        </div>
+      </div>
+
+      <!-- Data Pipeline -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Data Pipeline Management (3 screens)</div>
+        <div class="page-grid">
+          <a href="data-pipeline/extraction.html" class="page-link"><span class="pg-id">O6</span><span class="pg-name">Extraction</span></a>
+          <a href="data-pipeline/mapping.html" class="page-link"><span class="pg-id">O7</span><span class="pg-name">Mapping</span></a>
+          <a href="data-pipeline/validation.html" class="page-link"><span class="pg-id">O8</span><span class="pg-name">Validation</span></a>
+        </div>
+      </div>
+
+      <!-- Data Quality -->
+      <div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Data Quality Assurance (3 screens)</div>
+        <div class="page-grid">
+          <a href="data-quality/dashboard.html" class="page-link"><span class="pg-id">O9</span><span class="pg-name">Dashboard</span></a>
+          <a href="data-quality/validation-rules.html" class="page-link"><span class="pg-id">O10</span><span class="pg-name">Rules</span></a>
+          <a href="data-quality/reconciliation.html" class="page-link"><span class="pg-id">O11</span><span class="pg-name">Reconciliation</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AREA 5: DATA ANALYST / BUSINESS ANALYST -->
+    <div class="area-section">
+      <div class="area-title">📊 Area 5 — Data Analyst / Business Analyst (16 Screens)</div>
+      
+      <!-- KPI Builder -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">KPI Builder — Custom Metrics (3 screens)</div>
+        <div class="page-grid">
+          <a href="kpi-builder/builder.html" class="page-link"><span class="pg-id">D1</span><span class="pg-name">Builder</span></a>
+          <a href="kpi-builder/templates.html" class="page-link"><span class="pg-id">D2</span><span class="pg-name">Templates</span></a>
+          <a href="kpi-builder/my-kpis.html" class="page-link"><span class="pg-id">D3</span><span class="pg-name">My KPIs</span></a>
+        </div>
+      </div>
+
+      <!-- Dashboard Builder -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Dashboard Builder — Drag-Drop Customization (3 screens)</div>
+        <div class="page-grid">
+          <a href="dashboard-builder/builder.html" class="page-link"><span class="pg-id">D4</span><span class="pg-name">Builder</span></a>
+          <a href="dashboard-builder/gallery.html" class="page-link"><span class="pg-id">D5</span><span class="pg-name">Gallery</span></a>
+          <a href="dashboard-builder/my-dashboards.html" class="page-link"><span class="pg-id">D6</span><span class="pg-name">My Dashboards</span></a>
+        </div>
+      </div>
+
+      <!-- Formula Builder -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Formula Builder — Custom Calculations (2 screens)</div>
+        <div class="page-grid">
+          <a href="formula-builder/builder.html" class="page-link"><span class="pg-id">D7</span><span class="pg-name">Builder</span></a>
+          <a href="formula-builder/library.html" class="page-link"><span class="pg-id">D8</span><span class="pg-name">Library</span></a>
+        </div>
+      </div>
+
+      <!-- Workflow Builder -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Workflow Builder — Process Automation (4 screens)</div>
+        <div class="page-grid">
+          <a href="workflow-builder/builder.html" class="page-link"><span class="pg-id">D9</span><span class="pg-name">Builder</span></a>
+          <a href="workflow-builder/templates.html" class="page-link"><span class="pg-id">D10</span><span class="pg-name">Templates</span></a>
+          <a href="workflow-builder/my-workflows.html" class="page-link"><span class="pg-id">D11</span><span class="pg-name">My Workflows</span></a>
+          <a href="workflow-builder/monitoring.html" class="page-link"><span class="pg-id">D12</span><span class="pg-name">Monitoring</span></a>
+        </div>
+      </div>
+
+      <!-- Reporting -->
+      <div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Custom Reports (4 screens)</div>
+        <div class="page-grid">
+          <a href="reports/list.html" class="page-link"><span class="pg-id">D13</span><span class="pg-name">Library</span></a>
+          <a href="reports/builder.html" class="page-link"><span class="pg-id">D14</span><span class="pg-name">Builder</span></a>
+          <a href="reports/templates.html" class="page-link"><span class="pg-id">D15</span><span class="pg-name">Templates</span></a>
+          <a href="reports/schedule.html" class="page-link"><span class="pg-id">D16</span><span class="pg-name">Schedule</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AREA 6: RISK MANAGER -->
+    <div class="area-section">
+      <div class="area-title">⚠️ Area 6 — Risk Manager / Compliance Officer (4 Screens)</div>
+      
+      <div class="page-grid">
+        <a href="risk-advisor/dashboard.html" class="page-link"><span class="pg-id">R1</span><span class="pg-name">Dashboard</span></a>
+        <a href="risk-advisor/risk-matrix.html" class="page-link"><span class="pg-id">R2</span><span class="pg-name">Risk Matrix</span></a>
+        <a href="risk-advisor/assessments.html" class="page-link"><span class="pg-id">R3</span><span class="pg-name">Assessments</span></a>
+        <a href="risk-advisor/mitigation.html" class="page-link"><span class="pg-id">R4</span><span class="pg-name">Mitigation</span></a>
+      </div>
+    </div>
+
+    <!-- AREA 7: ADMIN / SYSTEM -->
+    <div class="area-section">
+      <div class="area-title">🔧 Area 7 — Admin / System Administrator (11 Screens)</div>
+      
+      <!-- User Management -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">User & Access Management (5 screens)</div>
+        <div class="page-grid">
+          <a href="admin/users-list.html" class="page-link"><span class="pg-id">AD1</span><span class="pg-name">Users List</span></a>
+          <a href="admin/users-add.html" class="page-link"><span class="pg-id">AD2</span><span class="pg-name">Add User</span></a>
+          <a href="admin/users-detail.html" class="page-link"><span class="pg-id">AD3</span><span class="pg-name">User Detail</span></a>
+          <a href="admin/roles-list.html" class="page-link"><span class="pg-id">AD4</span><span class="pg-name">Roles & Permissions</span></a>
+          <a href="admin/roles-detail.html" class="page-link"><span class="pg-id">AD5</span><span class="pg-name">Role Detail</span></a>
+        </div>
+      </div>
+
+      <!-- Organization Management -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Organization & Audit (3 screens)</div>
+        <div class="page-grid">
+          <a href="admin/companies-list.html" class="page-link"><span class="pg-id">AD6</span><span class="pg-name">Companies</span></a>
+          <a href="admin/companies-detail.html" class="page-link"><span class="pg-id">AD7</span><span class="pg-name">Company Detail</span></a>
+          <a href="admin/audit-logs.html" class="page-link"><span class="pg-id">AD8</span><span class="pg-name">Audit Logs</span></a>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">System Settings (3 screens)</div>
+        <div class="page-grid">
+          <a href="settings/profile.html" class="page-link"><span class="pg-id">AD9</span><span class="pg-name">Profile</span></a>
+          <a href="settings/organization.html" class="page-link"><span class="pg-id">AD10</span><span class="pg-name">Organization</span></a>
+          <a href="settings/sessions.html" class="page-link"><span class="pg-id">AD11</span><span class="pg-name">Sessions</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      WIREFRAME — Mastiyo AI-Powered Business Intelligence Platform<br>
+      1 Unified Platform • 7 Role-Based Dashboard Areas • 73 Screens Complete<br>
+      Area 1 (4) + Area 2 (13) + Area 3 (8) + Area 4 (11) + Area 5 (16) + Area 6 (4) + Area 7 (11) = <strong>73 Screens</strong><br>
+      Dokumen ini untuk keperluan development team | Last Updated: June 2026
+    </div>
+  </div>
+
+</body>
+</html>
+

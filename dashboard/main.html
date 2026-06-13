@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER / EXECUTIVE</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/main.html" class="nav-item active">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      
+      <div class="nav-section">Performance</div>
+      <a href="../dashboard/kpi-overview.html" class="nav-item">
+        <span class="icon">📈</span> KPI Overview
+      </a>
+      <a href="../dashboard/kpi-targets.html" class="nav-item">
+        <span class="icon">🎯</span> vs Targets
+      </a>
+      <a href="../dashboard/trends.html" class="nav-item">
+        <span class="icon">📊</span> Trends
+      </a>
+      <a href="../dashboard/alerts.html" class="nav-item">
+        <span class="icon">⚠️</span> Alerts
+      </a>
+      <a href="../dashboard/multi-company.html" class="nav-item">
+        <span class="icon">🏢</span> Multi-Company
+      </a>
+
+      <div class="nav-section">Intelligence</div>
+      <a href="../ai-intelligence/analysis.html" class="nav-item">
+        <span class="icon">🔍</span> AI Analysis
+      </a>
+      <a href="../ai-intelligence/insights.html" class="nav-item">
+        <span class="icon">💡</span> Insights
+      </a>
+      <a href="../ai-intelligence/agents.html" class="nav-item">
+        <span class="icon">🤖</span> AI Agents
+      </a>
+      <a href="../ai-intelligence/forecasts.html" class="nav-item">
+        <span class="icon">🔮</span> Forecasts
+      </a>
+
+      <div class="nav-section">Risk & Finance</div>
+      <a href="../ai-cfo/dashboard.html" class="nav-item">
+        <span class="icon">💰</span> Financial Health
+      </a>
+      <a href="../risk-advisor/dashboard.html" class="nav-item">
+        <span class="icon">⚠️</span> Risk Dashboard
+      </a>
+
+      <div class="nav-section">Management</div>
+      <a href="../admin/users-list.html" class="nav-item">
+        <span class="icon">👥</span> Users
+      </a>
+      <a href="../admin/companies-list.html" class="nav-item">
+        <span class="icon">🏢</span> Companies
+      </a>
+      <a href="../admin/roles-list.html" class="nav-item">
+        <span class="icon">👮</span> Roles & Permissions
+      </a>
+
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../settings/sessions.html" class="nav-item">
+        <span class="icon">🔓</span> Sessions
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Dashboard • <strong>Overview</strong></div>
+      <div class="topbar-right">
+        <input type="text" class="search-box" placeholder="Search...">
+        <div class="notif-bell">🔔<div class="dot"></div></div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Welcome Back, John</h1>
+      <p class="page-subtitle" id="page-subtitle">PT APM Dashboard • Last update: 2 minutes ago</p>
+
+      <!-- Company Selector -->
+      <div class="card" style="background: var(--accent-light); margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h3 style="color: var(--primary); margin-bottom: 0.25rem;">Active Company</h3>
+            <p style="color: var(--text); font-weight: 600;" id="active-company-name">PT APM (Laboratory Equipment)</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" id="btn-switch-company">Switch Company</button>
+        </div>
+      </div>
+
+      <!-- KPI Overview -->
+      <h2 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary);">Key Performance Indicators</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card success" id="kpi-card-revenue">
+          <div class="kpi-label">Revenue / Sales</div>
+          <div class="kpi-value" id="kpi-val-revenue">Rp 27.5B</div>
+          <div class="kpi-trend up" id="kpi-trend-revenue">Target Real 2026: 31B</div>
+        </div>
+        <div class="kpi-card" id="kpi-card-profit">
+          <div class="kpi-label">Profit</div>
+          <div class="kpi-value" id="kpi-val-profit">Rp 10.19B</div>
+          <div class="kpi-trend up" id="kpi-trend-profit">Target 2026: 11B</div>
+        </div>
+        <div class="kpi-card" id="kpi-card-cogs">
+          <div class="kpi-label">COGS</div>
+          <div class="kpi-value" id="kpi-val-cogs">Rp 17.3B</div>
+          <div class="kpi-trend down" id="kpi-trend-cogs">Target 2026: 20B Cost</div>
+        </div>
+        <div class="kpi-card warning" id="kpi-card-forecast">
+          <div class="kpi-label">Forecast Des 2025</div>
+          <div class="kpi-value" id="kpi-val-forecast">Rp 5.2B</div>
+          <div class="kpi-trend up" id="kpi-trend-forecast">Deal PO Potensial 3.64B</div>
+        </div>
+      </div>
+
+      <!-- Revenue & Customers -->
+      <div class="grid-1-1" style="margin-top: 2rem;">
+        
+        <div class="card">
+          <div class="card-header">Revenue Trend (YTD)</div>
+          <div style="padding: 1rem 0; text-align: center;">
+            <svg viewBox="0 0 400 150" style="width: 100%; height: 150px; display: block; overflow: visible;">
+              <!-- Grid lines -->
+              <line x1="40" y1="20" x2="380" y2="20" stroke="#ddd" stroke-width="1" />
+              <line x1="40" y1="60" x2="380" y2="60" stroke="#ddd" stroke-width="1" />
+              <line x1="40" y1="100" x2="380" y2="100" stroke="#ddd" stroke-width="1" />
+              <line x1="40" y1="130" x2="380" y2="130" stroke="#ddd" stroke-width="1" />
+              <!-- Trend line -->
+              <polyline id="trend-line" points="40,110 100,80 160,50 220,30 280,20 340,40 380,25" fill="none" stroke="#2E86C1" stroke-width="3" />
+              <circle id="trend-circle-1" cx="40" cy="110" r="4" fill="#2E86C1" />
+              <circle id="trend-circle-2" cx="100" cy="80" r="4" fill="#2E86C1" />
+              <circle id="trend-circle-3" cx="380" cy="25" r="4" fill="#2E86C1" />
+              <!-- Labels -->
+              <text x="40" y="145" font-size="11" fill="#666" text-anchor="middle">Jan</text>
+              <text x="210" y="145" font-size="11" fill="#666" text-anchor="middle">Jun</text>
+              <text x="380" y="145" font-size="11" fill="#666" text-anchor="middle">Dec</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Top Customers</div>
+          <ul class="list-group" id="top-customers-list">
+            <li style="display: flex; justify-content: space-between;">
+              <span><strong>RS Pemerintah</strong> - Healthcare</span>
+              <span style="color: var(--success); font-weight: 600;">Rp 5.2B</span>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <span><strong>Univ. Muhammadiyah</strong> - Kampus</span>
+              <span style="color: var(--success); font-weight: 600;">Rp 3.1B</span>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <span><strong>Farmasi (UKM Industri)</strong> - Industry</span>
+              <span style="color: var(--success); font-weight: 600;">Rp 2.0B</span>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <span><strong>F&B Industry</strong> - Corporate</span>
+              <span style="color: var(--success); font-weight: 600;">Rp 5.2B</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Sales Pipeline & Inventory -->
+      <div class="grid-1-1" style="margin-top: 1.5rem;">
+        
+        <div class="card">
+          <div class="card-header">Sales Pipeline</div>
+          <ul class="list-group" id="sales-pipeline-list">
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Deal PO Potensial (APM)</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Confidence level 60-80%</p>
+              </div>
+              <span style="background: var(--warning); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">Rp 3.64B</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Deal PO Potensial (Gagas)</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Confidence level 50-70%</p>
+              </div>
+              <span style="background: var(--info); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">Rp 1.25B</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Forecast Tambahan</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Target Q4 2025</p>
+              </div>
+              <span style="background: var(--success); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">Rp 17.3B</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Inventory Status</div>
+          <ul class="list-group" id="inventory-status-list">
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Mesin HD</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Medical Equipment</p>
+              </div>
+              <span style="background: var(--success); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">12 Units</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Analyzer XL</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Lab Equipment</p>
+              </div>
+              <span style="background: var(--warning); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">3 Units</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Centrifuge</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Lab Equipment</p>
+              </div>
+              <span style="background: var(--danger); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">1 Unit</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">Recent Activity</div>
+        <ul class="list-group" style="font-size: 0.9rem;" id="recent-activity-list">
+          <li>
+            <strong>Invoice #INV-2026-001 created</strong> - Rp 10.19B to RSUD Bandung
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">2 hours ago</p>
+          </li>
+          <li>
+            <strong>New user invited</strong> - sarah@ptapm.com (Financial Manager role)
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">5 hours ago</p>
+          </li>
+          <li>
+            <strong>Purchase Order approved</strong> - PO-2026-045 from PT Supplier ABC
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">1 day ago</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <style>
+    .company-option-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--white);
+    }
+    .company-option-card:hover {
+      background: var(--bg);
+      border-color: var(--primary-light) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .company-option-card.selected {
+      border-color: var(--primary) !important;
+      background: var(--accent-light) !important;
+    }
+  </style>
+
+  <!-- Switch Company Modal -->
+  <div class="modal" id="switch-company-modal">
+    <div class="modal-content" style="border-radius: 8px;">
+      <div class="modal-header">
+        <h3 class="modal-title" style="color: var(--primary);">Select Company</h3>
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 1.5rem;">
+        <p style="color: var(--text-light); margin-bottom: 1.25rem; font-size: 0.9rem;">
+          Select an active company to simulate dashboard KPIs and business metrics.
+        </p>
+        <div class="company-select-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div class="company-option-card" data-company="apm">
+            <div>
+              <strong style="color: var(--primary); display: block; font-size: 0.95rem;">PT APM</strong>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Laboratory & Medical Equipment</span>
+            </div>
+            <span class="badge badge-success badge-status" style="display: none;">Active</span>
+          </div>
+          <div class="company-option-card" data-company="gagas">
+            <div>
+              <strong style="color: var(--primary); display: block; font-size: 0.95rem;">PT GAGAS (Labenviro)</strong>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Environment & Hygiene</span>
+            </div>
+            <span class="badge badge-success badge-status" style="display: none;">Active</span>
+          </div>
+          <div class="company-option-card" data-company="lintang">
+            <div>
+              <strong style="color: var(--primary); display: block; font-size: 0.95rem;">PT LINTANG</strong>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Consulting & Training</span>
+            </div>
+            <span class="badge badge-success badge-status" style="display: none;">Active</span>
+          </div>
+          <div class="company-option-card" data-company="kinan">
+            <div>
+              <strong style="color: var(--primary); display: block; font-size: 0.95rem;">PT KINAN / Andis Lab</strong>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Laboratory Service</span>
+            </div>
+            <span class="badge badge-success badge-status" style="display: none;">Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Data definition for simulation
+    const companyData = {
+      apm: {
+        name: "PT APM (Laboratory Equipment)",
+        subtitle: "PT APM Dashboard • Last update: 2 minutes ago",
+        kpis: {
+          revenue: { val: "Rp 27.5B", trend: "Target Real 2026: 31B", statusClass: "success" },
+          profit: { val: "Rp 10.19B", trend: "Target 2026: 11B", statusClass: "" },
+          cogs: { val: "Rp 17.3B", trend: "Target 2026: 20B Cost", statusClass: "" },
+          forecast: { val: "Rp 5.2B", trend: "Deal PO Potensial 3.64B", statusClass: "warning" }
+        },
+        trendLine: {
+          points: "40,110 100,80 160,50 220,30 280,20 340,40 380,25",
+          circle1: { cx: 40, cy: 110 },
+          circle2: { cx: 100, cy: 80 },
+          circle3: { cx: 380, cy: 25 }
+        },
+        customers: [
+          { name: "RS Pemerintah", type: "Healthcare", amount: "Rp 5.2B" },
+          { name: "Univ. Muhammadiyah", type: "Kampus", amount: "Rp 3.1B" },
+          { name: "Farmasi (UKM Industri)", type: "Industry", amount: "Rp 2.0B" },
+          { name: "F&B Industry", type: "Corporate", amount: "Rp 5.2B" }
+        ],
+        pipeline: [
+          { title: "Deal PO Potensial (APM)", conf: "Confidence level 60-80%", amount: "Rp 3.64B", class: "warning" },
+          { title: "Deal PO Potensial (Gagas)", conf: "Confidence level 50-70%", amount: "Rp 1.25B", class: "info" },
+          { title: "Forecast Tambahan", conf: "Target Q4 2025", amount: "Rp 17.3B", class: "success" }
+        ],
+        inventory: [
+          { item: "Mesin HD", category: "Medical Equipment", val: "12 Units", class: "success" },
+          { item: "Analyzer XL", category: "Lab Equipment", val: "3 Units", class: "warning" },
+          { item: "Centrifuge", category: "Lab Equipment", val: "1 Unit", class: "danger" }
+        ],
+        activities: [
+          { text: "Invoice #INV-2026-001 created - Rp 10.19B to RSUD Bandung", time: "2 hours ago" },
+          { text: "New user invited - sarah@ptapm.com (Financial Manager role)", time: "5 hours ago" },
+          { text: "Purchase Order approved - PO-2026-045 from PT Supplier ABC", time: "1 day ago" }
+        ]
+      },
+      gagas: {
+        name: "PT GAGAS (Labenviro) (Environment & Hygiene)",
+        subtitle: "PT GAGAS Dashboard • Last update: 5 minutes ago",
+        kpis: {
+          revenue: { val: "Rp 8.0B", trend: "Target Real 2026: 7.2B", statusClass: "success" },
+          profit: { val: "Rp 2.1B", trend: "Target 2026: 2.5B", statusClass: "" },
+          cogs: { val: "Rp 5.9B", trend: "Target 2026: 4.7B Cost", statusClass: "" },
+          forecast: { val: "Rp 2.1B", trend: "Deal PO Potensial 1.25B", statusClass: "warning" }
+        },
+        trendLine: {
+          points: "40,130 100,110 160,95 220,70 280,60 340,45 380,40",
+          circle1: { cx: 40, cy: 130 },
+          circle2: { cx: 100, cy: 110 },
+          circle3: { cx: 380, cy: 40 }
+        },
+        customers: [
+          { name: "Dinas Lingkungan Hidup", type: "Pemerintah", amount: "Rp 2.5B" },
+          { name: "PT Semen Sentosa", type: "Industri BUMN", amount: "Rp 1.8B" },
+          { name: "PT Kimia Abadi", type: "Manufactur QC", amount: "Rp 1.4B" },
+          { name: "Lab Klinik Utama", type: "Lab Services", amount: "Rp 1.1B" }
+        ],
+        pipeline: [
+          { title: "Deal PO Potensial (Gagas)", conf: "Confidence level 50-70%", amount: "Rp 1.25B", class: "info" },
+          { title: "IPAL Project Tender", conf: "Confidence level 40%", amount: "Rp 2.0B", class: "warning" },
+          { title: "Training & Consulting QHSE", conf: "Scheduled Q3 2026", amount: "Rp 800M", class: "success" }
+        ],
+        inventory: [
+          { item: "GagasIpal Kit", category: "Local IPAL Product", val: "8 Units", class: "success" },
+          { item: "GetLab Sampler", category: "Sampling Equipment", val: "5 Units", class: "success" },
+          { item: "H2S Detector", category: "Imported Brand", val: "2 Units", class: "warning" }
+        ],
+        activities: [
+          { text: "Tender doc submitted for Dinas Lingkungan Hidup", time: "1 hour ago" },
+          { text: "Calibration service completed for PT Semen Sentosa", time: "4 hours ago" },
+          { text: "Delivery of 3 units GagasIpal Kit completed", time: "2 days ago" }
+        ]
+      },
+      lintang: {
+        name: "PT LINTANG (Consulting & Training)",
+        subtitle: "PT LINTANG Dashboard • Last update: 12 minutes ago",
+        kpis: {
+          revenue: { val: "Rp 2.0B", trend: "Target Real 2026: 2.5B", statusClass: "success" },
+          profit: { val: "Rp 450M", trend: "Target 2026: 600M", statusClass: "" },
+          cogs: { val: "Rp 1.55B", trend: "Target 2026: 1.9B Cost", statusClass: "" },
+          forecast: { val: "Rp 500M", trend: "Deal PO Potensial 300M", statusClass: "warning" }
+        },
+        trendLine: {
+          points: "40,140 100,135 160,120 220,115 280,100 340,90 380,85",
+          circle1: { cx: 40, cy: 140 },
+          circle2: { cx: 100, cy: 135 },
+          circle3: { cx: 380, cy: 85 }
+        },
+        customers: [
+          { name: "Pusdiklat Migas", type: "Training BUMN", amount: "Rp 650M" },
+          { name: "PT Pertamina EP", type: "Consulting", amount: "Rp 450M" },
+          { name: "Universitas Negeri", type: "Lab UPL", amount: "Rp 350M" },
+          { name: "HSE Forum Jawa Barat", type: "Sertifikasi", amount: "Rp 250M" }
+        ],
+        pipeline: [
+          { title: "Sertifikasi LSP Batch 3", conf: "Confidence level 80%", amount: "Rp 150M", class: "success" },
+          { title: "Consulting AMDAL Pabrik Baru", conf: "Confidence level 60%", amount: "Rp 250M", class: "warning" },
+          { title: "Corporate In-house Training", conf: "Proposal Submitted", amount: "Rp 100M", class: "info" }
+        ],
+        inventory: [
+          { item: "Modul Sertifikasi HSE", category: "Printed Material", val: "120 Sets", class: "success" },
+          { item: "Training Kit & Bags", category: "Merchandise", val: "45 Units", class: "warning" },
+          { item: "UPL Testing Reagents", category: "Lab Consumables", val: "15 Kits", class: "success" }
+        ],
+        activities: [
+          { text: "AMDAL Report finalized for PT Pertamina EP", time: "3 hours ago" },
+          { text: "HSE Training Batch 2 completed (25 participants)", time: "6 hours ago" },
+          { text: "Invoice #INV-LNT-023 sent to Pusdiklat Migas", time: "1 day ago" }
+        ]
+      },
+      kinan: {
+        name: "PT KINAN / Andis Lab (Laboratory Service)",
+        subtitle: "PT KINAN Dashboard • Last update: 15 minutes ago",
+        kpis: {
+          revenue: { val: "Rp 1.25B", trend: "Target Real 2026: 1.5B", statusClass: "success" },
+          profit: { val: "Rp 250M", trend: "Target 2026: 350M", statusClass: "" },
+          cogs: { val: "Rp 1.0B", trend: "Target 2026: 1.15B Cost", statusClass: "" },
+          forecast: { val: "Rp 300M", trend: "Deal PO Potensial 150M", statusClass: "warning" }
+        },
+        trendLine: {
+          points: "40,145 100,142 160,135 220,130 280,120 340,118 380,110",
+          circle1: { cx: 40, cy: 145 },
+          circle2: { cx: 100, cy: 142 },
+          circle3: { cx: 380, cy: 110 }
+        },
+        customers: [
+          { name: "Klinik Medika Pratama", type: "Lab Medis", amount: "Rp 400M" },
+          { name: "Dinas Kesehatan Kota", type: "Pemerintah", amount: "Rp 300M" },
+          { name: "Puskesmas Raya", type: "BPJS Alkes", amount: "Rp 250M" },
+          { name: "Masyarakat Umum", type: "Retail Walk-in", amount: "Rp 150M" }
+        ],
+        pipeline: [
+          { title: "Alat Lab Medis Supply", conf: "Confidence level 70%", amount: "Rp 100M", class: "success" },
+          { title: "BHP Reagents Order", conf: "Confidence level 50%", amount: "Rp 50M", class: "warning" },
+          { title: "Klinik KSO proposal", conf: "Under Review", amount: "Rp 150M", class: "info" }
+        ],
+        inventory: [
+          { item: "Lab Med Reagents", category: "Consumables", val: "50 Boxes", class: "success" },
+          { item: "Rapid Test Kits", category: "Diagnostics", val: "200 Pcs", class: "success" },
+          { item: "Blood Draw Tubes", category: "Disposables", val: "5 Packs", class: "danger" }
+        ],
+        activities: [
+          { text: "BHP Reagents stock replenished", time: "30 minutes ago" },
+          { text: "Daily patient lab results sync completed", time: "2 hours ago" },
+          { text: "New KSO proposal submitted to RS Kartika", time: "3 days ago" }
+        ]
+      }
+    };
+
+    // DOM Elements
+    const activeCompanyText = document.getElementById('active-company-name');
+    const pageSubtitle = document.getElementById('page-subtitle');
+    const btnSwitchCompany = document.getElementById('btn-switch-company');
+    const modal = document.getElementById('switch-company-modal');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const companyCards = document.querySelectorAll('.company-option-card');
+
+    // KPI Elements
+    const kpiValRevenue = document.getElementById('kpi-val-revenue');
+    const kpiTrendRevenue = document.getElementById('kpi-trend-revenue');
+    const kpiCardRevenue = document.getElementById('kpi-card-revenue');
+
+    const kpiValProfit = document.getElementById('kpi-val-profit');
+    const kpiTrendProfit = document.getElementById('kpi-trend-profit');
+    const kpiCardProfit = document.getElementById('kpi-card-profit');
+
+    const kpiValCogs = document.getElementById('kpi-val-cogs');
+    const kpiTrendCogs = document.getElementById('kpi-trend-cogs');
+    const kpiCardCogs = document.getElementById('kpi-card-cogs');
+
+    const kpiValForecast = document.getElementById('kpi-val-forecast');
+    const kpiTrendForecast = document.getElementById('kpi-trend-forecast');
+    const kpiCardForecast = document.getElementById('kpi-card-forecast');
+
+    // SVG elements
+    const trendLine = document.getElementById('trend-line');
+    const circle1 = document.getElementById('trend-circle-1');
+    const circle2 = document.getElementById('trend-circle-2');
+    const circle3 = document.getElementById('trend-circle-3');
+
+    // Lists
+    const customersList = document.getElementById('top-customers-list');
+    const pipelineList = document.getElementById('sales-pipeline-list');
+    const inventoryList = document.getElementById('inventory-status-list');
+    const activityList = document.getElementById('recent-activity-list');
+
+    // Function to render active company
+    function selectCompany(companyKey) {
+      const data = companyData[companyKey];
+      if (!data) return;
+
+      // Save state
+      localStorage.setItem('activeCompany', companyKey);
+
+      // Update text/titles
+      activeCompanyText.textContent = data.name;
+      pageSubtitle.textContent = data.subtitle;
+
+      // Update KPIs
+      kpiValRevenue.textContent = data.kpis.revenue.val;
+      kpiTrendRevenue.textContent = data.kpis.revenue.trend;
+      kpiCardRevenue.className = `kpi-card ${data.kpis.revenue.statusClass}`;
+
+      kpiValProfit.textContent = data.kpis.profit.val;
+      kpiTrendProfit.textContent = data.kpis.profit.trend;
+      kpiCardProfit.className = `kpi-card ${data.kpis.profit.statusClass}`;
+
+      kpiValCogs.textContent = data.kpis.cogs.val;
+      kpiTrendCogs.textContent = data.kpis.cogs.trend;
+      kpiCardCogs.className = `kpi-card ${data.kpis.cogs.statusClass}`;
+
+      kpiValForecast.textContent = data.kpis.forecast.val;
+      kpiTrendForecast.textContent = data.kpis.forecast.trend;
+      kpiCardForecast.className = `kpi-card ${data.kpis.forecast.statusClass}`;
+
+      // Update SVG
+      trendLine.setAttribute('points', data.trendLine.points);
+      circle1.setAttribute('cx', data.trendLine.circle1.cx);
+      circle1.setAttribute('cy', data.trendLine.circle1.cy);
+      circle2.setAttribute('cx', data.trendLine.circle2.cx);
+      circle2.setAttribute('cy', data.trendLine.circle2.cy);
+      circle3.setAttribute('cx', data.trendLine.circle3.cx);
+      circle3.setAttribute('cy', data.trendLine.circle3.cy);
+
+      // Update Lists
+      customersList.innerHTML = data.customers.map(c => `
+        <li style="display: flex; justify-content: space-between;">
+          <span><strong>${c.name}</strong> - ${c.type}</span>
+          <span style="color: var(--success); font-weight: 600;">${c.amount}</span>
+        </li>
+      `).join('');
+
+      pipelineList.innerHTML = data.pipeline.map(p => `
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <strong>${p.title}</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">${p.conf}</p>
+          </div>
+          <span style="background: var(--${p.class}); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">${p.amount}</span>
+        </li>
+      `).join('');
+
+      inventoryList.innerHTML = data.inventory.map(i => `
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <strong>${i.item}</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">${i.category}</p>
+          </div>
+          <span style="background: var(--${i.class}); color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 600;">${i.val}</span>
+        </li>
+      `).join('');
+
+      activityList.innerHTML = data.activities.map(a => `
+        <li>
+          <strong>${a.text}</strong>
+          <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">${a.time}</p>
+        </li>
+      `).join('');
+
+      // Update Selection status in Modal
+      companyCards.forEach(card => {
+        const key = card.getAttribute('data-company');
+        const badge = card.querySelector('.badge-status');
+        if (key === companyKey) {
+          card.classList.add('selected');
+          badge.style.display = 'inline-block';
+        } else {
+          card.classList.remove('selected');
+          badge.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Control Event Listeners
+    btnSwitchCompany.addEventListener('click', () => {
+      modal.classList.add('show');
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+      modal.classList.remove('show');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+      }
+    });
+
+    companyCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-company');
+        selectCompany(key);
+        setTimeout(() => {
+          modal.classList.remove('show');
+        }, 200);
+      });
+    });
+
+    // Initialize with stored state or default 'apm'
+    const storedCompany = localStorage.getItem('activeCompany') || 'apm';
+    selectCompany(storedCompany);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">SUPER ADMIN</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="admin.html" class="nav-item active">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      
+      <div class="nav-section">Administration</div>
+      <a href="../admin/users-list.html" class="nav-item">
+        <span class="icon">👥</span> Users
+        <span class="badge">12</span>
+      </a>
+      <a href="../admin/companies-list.html" class="nav-item">
+        <span class="icon">🏢</span> Companies
+      </a>
+      <a href="../admin/roles-list.html" class="nav-item">
+        <span class="icon">👮</span> Roles & Permissions
+      </a>
+
+      <div class="nav-section">Organization</div>
+      <a href="../settings/organization.html" class="nav-item">
+        <span class="icon">⚙️</span> Organization Settings
+      </a>
+      <a href="../admin/audit-logs.html" class="nav-item">
+        <span class="icon">📋</span> Audit Logs
+      </a>
+
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">👤</span> My Profile
+      </a>
+      <a href="../settings/sessions.html" class="nav-item">
+        <span class="icon">🔓</span> Active Sessions
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Administration • <strong>Dashboard</strong></div>
+      <div class="topbar-right">
+        <input type="text" class="search-box" placeholder="Search...">
+        <div class="notif-bell">🔔<div class="dot"></div></div>
+        <div class="user-avatar">SA</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Admin Dashboard</h1>
+      <p class="page-subtitle">Organization Overview • Last update: 1 minute ago</p>
+
+      <!-- Organization Stats -->
+      <div class="kpi-grid">
+        <div class="kpi-card success">
+          <div class="kpi-label">Total Organizations</div>
+          <div class="kpi-value">24</div>
+          <div class="kpi-trend up">↑ 3 new this month</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Total Users</div>
+          <div class="kpi-value">156</div>
+          <div class="kpi-trend up">↑ 18 active today</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Total Companies</div>
+          <div class="kpi-value">87</div>
+          <div class="kpi-trend up">↑ 8 new this month</div>
+        </div>
+        <div class="kpi-card warning">
+          <div class="kpi-label">Pending Verifications</div>
+          <div class="kpi-value">4</div>
+          <div class="kpi-trend">Needs approval</div>
+        </div>
+      </div>
+
+      <!-- Organizations & Activity -->
+      <div class="grid-2-1" style="margin-top: 2rem;">
+        
+        <div class="card">
+          <div class="card-header">Active Organizations</div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Organization</th>
+                  <th>Owner</th>
+                  <th>Users</th>
+                  <th>Companies</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>PT Maju Jaya</strong></td>
+                  <td>Budi Santoso</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td><strong>PT APM</strong></td>
+                  <td>John Doe</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV Sentosa</strong></td>
+                  <td>Rina Wijaya</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td><strong>PT Global</strong></td>
+                  <td>Ahmad Rahman</td>
+                  <td>12</td>
+                  <td>5</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">System Status</div>
+          <ul class="list-group" style="font-size: 0.9rem;">
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Database</span>
+              <span style="color: var(--success); font-weight: 600;">✓ Healthy</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>API Server</span>
+              <span style="color: var(--success); font-weight: 600;">✓ Running</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Cache</span>
+              <span style="color: var(--success); font-weight: 600;">✓ Active</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Queue</span>
+              <span style="color: var(--success); font-weight: 600;">✓ Processing</span>
+            </li>
+          </ul>
+          <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted);">
+            Last checked: 1 minute ago
+          </div>
+        </div>
+
+      </div>
+
+      <!-- User Activity & Logs -->
+      <div class="grid-1-1" style="margin-top: 1.5rem;">
+        
+        <div class="card">
+          <div class="card-header">Recent Logins</div>
+          <ul class="list-group" style="font-size: 0.9rem;">
+            <li style="display: flex; justify-content: space-between;">
+              <div>
+                <strong>john@ptapm.com</strong>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">OWNER</p>
+              </div>
+              <span style="text-align: right; color: var(--text-muted); font-size: 0.8rem;">5 min ago<br>192.168.1.100</span>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <div>
+                <strong>sarah@majujaya.com</strong>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">CFO</p>
+              </div>
+              <span style="text-align: right; color: var(--text-muted); font-size: 0.8rem;">15 min ago<br>192.168.1.105</span>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <div>
+                <strong>admin@global.com</strong>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">OWNER</p>
+              </div>
+              <span style="text-align: right; color: var(--text-muted); font-size: 0.8rem;">32 min ago<br>192.168.1.110</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">User Registrations (7 days)</div>
+          <ul class="list-group" style="font-size: 0.9rem;">
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>New Organizations</span>
+              <strong style="color: var(--success);">3</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>New Users</span>
+              <strong style="color: var(--success);">18</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Pending Verification</span>
+              <strong style="color: var(--warning);">4</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center;">
+              <span>API Keys Created</span>
+              <strong>7</strong>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Recent Alerts -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">System Alerts</div>
+        <div style="padding: 0;">
+          <div class="alert alert-warning" style="border-radius: 0; margin: 0;">
+            <span>⚠️</span>
+            <div>
+              <strong>High Memory Usage</strong> - Server #2 memory at 85%. Scaling initiated.
+              <p style="color: inherit; opacity: 0.7; margin: 0.2rem 0 0 0; font-size: 0.85rem;">1 hour ago</p>
+            </div>
+          </div>
+          <div class="alert alert-info" style="border-radius: 0; margin: 0;">
+            <span>ℹ️</span>
+            <div>
+              <strong>Scheduled Maintenance</strong> - Database backup completed successfully.
+              <p style="color: inherit; opacity: 0.7; margin: 0.2rem 0 0 0; font-size: 0.85rem;">3 hours ago</p>
+            </div>
+          </div>
+          <div class="alert alert-success" style="border-radius: 0; margin: 0;">
+            <span>✓</span>
+            <div>
+              <strong>SSL Certificate Renewed</strong> - Valid for 1 year.
+              <p style="color: inherit; opacity: 0.7; margin: 0.2rem 0 0 0; font-size: 0.85rem;">1 day ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

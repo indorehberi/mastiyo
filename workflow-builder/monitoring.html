@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow Monitoring - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="monitoring.html" class="nav-item active"><span class="icon">📊</span> Monitoring</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Customization • <strong>Workflow Monitoring</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Workflow Execution Monitor</h1>
+      <p class="page-subtitle">Real-time workflow execution tracking</p>
+
+      <div class="kpi-grid" style="margin-bottom: 1.5rem;">
+        <div class="kpi-card success"><div class="kpi-label">Successful</div><div class="kpi-value">599</div></div>
+        <div class="kpi-card danger"><div class="kpi-label">Failed</div><div class="kpi-value">12</div></div>
+        <div class="kpi-card"><div class="kpi-label">Avg Duration</div><div class="kpi-value">2.3s</div></div>
+        <div class="kpi-card"><div class="kpi-label">Success Rate</div><div class="kpi-value">98.0%</div></div>
+      </div>
+
+      <div class="card">
+        <h3>Recent Executions</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Workflow</th><th>Triggered</th><th>Duration</th><th>Status</th><th>Message</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Invoice Paid Alert</strong></td><td>2 min ago</td><td>0.8s</td><td><span class="badge badge-success">✓ Success</span></td><td>Email sent</td></tr>
+            <tr><td><strong>Daily Report</strong></td><td>1 hour ago</td><td>3.2s</td><td><span class="badge badge-success">✓ Success</span></td><td>Generated & emailed</td></tr>
+            <tr><td><strong>Expense Approval</strong></td><td>5 hours ago</td><td>1.5s</td><td><span class="badge badge-danger">✗ Failed</span></td><td>Approver not found</td></tr>
+            <tr><td><strong>Low Inventory Alert</strong></td><td>Yesterday</td><td>0.6s</td><td><span class="badge badge-success">✓ Success</span></td><td>3 items low stock</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

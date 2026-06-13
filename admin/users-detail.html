@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Detail - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">OWNER</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/main.html" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <div class="nav-section">Management</div>
+      <a href="users-list.html" class="nav-item active">
+        <span class="icon">👥</span> Users
+      </a>
+      <a href="companies-list.html" class="nav-item">
+        <span class="icon">🏢</span> Companies
+      </a>
+      <a href="roles-list.html" class="nav-item">
+        <span class="icon">👮</span> Roles
+      </a>
+      <div class="nav-section">Operations</div>
+      <a href="audit-logs.html" class="nav-item">
+        <span class="icon">📋</span> Audit Logs
+      </a>
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb"><a href="users-list.html">Users</a> • <strong>John Doe</strong></div>
+      <div class="topbar-right">
+        <div class="notif-bell">🔔</div>
+        <div class="user-avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+        <div>
+          <h1 class="page-title">John Doe</h1>
+          <p class="page-subtitle">john@ptapm.com • Owner Profile</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-secondary btn-sm">Edit</button>
+          <button class="btn btn-danger btn-sm">Deactivate</button>
+        </div>
+      </div>
+
+      <!-- User Info & Tabs -->
+      <div class="grid-2-1">
+        
+        <div>
+          <!-- Basic Info Card -->
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Account Information</h3>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Email</p>
+                <p style="font-weight: 600;">john@ptapm.com</p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Phone</p>
+                <p style="font-weight: 600;">+62 812 3456 7890</p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Status</p>
+                <p><span class="badge badge-success">Active</span></p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Joined</p>
+                <p style="font-weight: 600;">January 15, 2026</p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem;">Last Login</p>
+                <p style="font-weight: 600;">5 minutes ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Security</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span>Two-Factor Authentication</span>
+              <span style="color: var(--success); font-weight: 600;">✓ Enabled</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Password Last Changed</span>
+              <span style="color: var(--text-muted);">3 days ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Roles & Permissions -->
+          <div class="card">
+            <h3 style="margin-bottom: 1rem; color: var(--primary);">Roles & Permissions</h3>
+            <div style="padding: 1rem; background: var(--bg); border-radius: var(--radius); margin-bottom: 1rem;">
+              <p style="font-weight: 600; margin-bottom: 0.5rem;">Primary Role</p>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span class="badge badge-primary" style="font-size: 0.85rem;">OWNER</span>
+                <span style="color: var(--text-muted); font-size: 0.85rem;">Full organization access</span>
+              </div>
+            </div>
+            
+            <p style="font-weight: 600; margin-bottom: 0.75rem; color: var(--text);">Assigned Companies</p>
+            <ul class="list-group" style="font-size: 0.9rem;">
+              <li style="display: flex; justify-content: space-between; align-items: center;">
+                <span><strong>PT APM</strong> - Laboratory Equipment</span>
+                <span class="badge">FULL</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Activity Stats -->
+          <div class="card">
+            <h3 style="margin-bottom: 1rem; color: var(--primary);">Activity</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">API Requests (7d)</p>
+                <p style="font-size: 1.3rem; font-weight: 700;">1,234</p>
+              </div>
+              <div>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Sessions</p>
+                <p style="font-size: 1.3rem; font-weight: 700;">3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Session Activity -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--primary);">Recent Activity</h3>
+        <ul class="list-group" style="font-size: 0.9rem;">
+          <li>
+            <strong>Logged in</strong> from 192.168.1.100 (Chrome on macOS)
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">5 minutes ago</p>
+          </li>
+          <li>
+            <strong>API Key created</strong> for "Mobile App Integration"
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">2 days ago</p>
+          </li>
+          <li>
+            <strong>Password changed</strong>
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">3 days ago</p>
+          </li>
+          <li>
+            <strong>Role updated</strong> from CFO to OWNER
+            <p style="color: var(--text-muted); margin: 0.2rem 0 0 0;">1 week ago</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

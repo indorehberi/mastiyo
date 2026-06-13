@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Performance - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><div class="sidebar-role">OWNER</div><nav class="sidebar-nav"><div class="nav-section">Forecast Agent</div><a href="performance.html" class="nav-item active"><span class="icon">📊</span> Performance</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Advanced AI • Forecast Agent • <strong>Model Performance</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Forecast Model Performance</h1>
+      <p class="page-subtitle">Historical accuracy and model evaluation metrics</p>
+
+      <div class="grid-2" style="margin-bottom: 2rem;">
+        <div class="card">
+          <h3>📈 Revenue Model (XGBoost)</h3>
+          <table style="font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>MAPE (Mean Absolute % Error)</strong></td><td style="text-align: right; color: #27AE60;">6.8%</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>RMSE (Root Mean Squared Error)</strong></td><td style="text-align: right;">Rp 980M</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>R² Score</strong></td><td style="text-align: right; color: #27AE60;">0.94</td></tr>
+            <tr><td><strong>Training Samples</strong></td><td style="text-align: right;">36 months</td></tr>
+          </table>
+          <div style="background: #e8f5e9; padding: 0.75rem; border-radius: 4px; margin-top: 1rem; font-size: 0.85rem;">
+            <strong>Status:</strong> Excellent performance. Model explains 94% of variance.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>📊 Margin Model (ARIMA)</h3>
+          <table style="font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>MAPE (Mean Absolute % Error)</strong></td><td style="text-align: right; color: #27AE60;">3.2%</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>RMSE</strong></td><td style="text-align: right;">0.38%</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>R² Score</strong></td><td style="text-align: right; color: #27AE60;">0.89</td></tr>
+            <tr><td><strong>Training Samples</strong></td><td style="text-align: right;">36 months</td></tr>
+          </table>
+          <div style="background: #e8f5e9; padding: 0.75rem; border-radius: 4px; margin-top: 1rem; font-size: 0.85rem;">
+            <strong>Status:</strong> Very good accuracy. Stable margins well predicted.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>💰 Cash Flow Model (Prophet)</h3>
+          <table style="font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>MAPE</strong></td><td style="text-align: right; color: #27AE60;">7.5%</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>RMSE</strong></td><td style="text-align: right;">Rp 1.25B</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>R² Score</strong></td><td style="text-align: right; color: #27AE60;">0.91</td></tr>
+            <tr><td><strong>Training Samples</strong></td><td style="text-align: right;">36 months</td></tr>
+          </table>
+          <div style="background: #e8f5e9; padding: 0.75rem; border-radius: 4px; margin-top: 1rem; font-size: 0.85rem;">
+            <strong>Status:</strong> Good performance across seasons and cycles.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Backtest Results</h3>
+          <table style="font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Period Tested</strong></td><td style="text-align: right;">2024-2026 (24M)</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Avg Forecast Error</strong></td><td style="text-align: right;">6.8%</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td><strong>Direction Accuracy</strong></td><td style="text-align: right; color: #27AE60;">88%</td></tr>
+            <tr><td><strong>Outliers Caught</strong></td><td style="text-align: right;">92%</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Model Accuracy Over Time</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Forecast Horizon</th><th>XGBoost Revenue</th><th>ARIMA Margin</th><th>Prophet Cash Flow</th><th>Avg Accuracy</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 month ahead</strong></td><td>4.2%</td><td>2.1%</td><td>5.8%</td><td><span class="badge badge-success">4.0%</span></td></tr>
+            <tr><td><strong>3 months ahead</strong></td><td>6.1%</td><td>3.2%</td><td>7.2%</td><td><span class="badge badge-success">5.5%</span></td></tr>
+            <tr><td><strong>6 months ahead</strong></td><td>7.8%</td><td>3.9%</td><td>8.5%</td><td><span class="badge badge-success">6.7%</span></td></tr>
+            <tr><td><strong>12 months ahead</strong></td><td>9.2%</td><td>4.5%</td><td>10.1%</td><td><span class="badge" style="background: #F39C12; color: white;">7.9%</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <h3>Model Retraining Schedule</h3>
+        <table style="font-size: 0.9rem;">
+          <tr style="border-bottom: 1px solid var(--border);"><td><strong>Revenue Model (XGBoost)</strong></td><td>Monthly</td><td style="text-align: right;"><span class="badge badge-success">Updated Jun 10</span></td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td><strong>Margin Model (ARIMA)</strong></td><td>Bi-weekly</td><td style="text-align: right;"><span class="badge badge-success">Updated Jun 11</span></td></tr>
+          <tr><td><strong>Cash Flow Model (Prophet)</strong></td><td>Monthly</td><td style="text-align: right;"><span class="badge badge-success">Updated Jun 09</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

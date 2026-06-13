@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="kpi-overview.html" class="nav-item"><span class="icon">📊</span> Overview</a><a href="alerts.html" class="nav-item active"><span class="icon">⚠️</span> Alerts</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Analysis • <strong>Alerts</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Alert Management</h1>
+      <p class="page-subtitle">Critical notifications from Configuration Layer thresholds</p>
+
+      <div class="card alert alert-danger"><span>🚨</span><div><strong>Critical Alert</strong> - Overdue receivables exceed Rp 5.2B (threshold: Rp 500M)</div></div>
+      <div class="card alert alert-warning"><span>⚠️</span><div><strong>Warning</strong> - Profit margin at 22% (target: 25%) - Action needed</div></div>
+
+      <div class="card">
+        <h3>Recent Alerts (7 days)</h3>
+        <table>
+          <thead><tr><th>Alert</th><th>Type</th><th>Triggered</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>High Overdue AR</strong></td>
+              <td><span class="badge badge-danger">Critical</span></td>
+              <td>2 hours ago</td>
+              <td><span class="badge">Open</span></td>
+              <td><button class="btn btn-secondary btn-sm">View</button></td>
+            </tr>
+            <tr>
+              <td><strong>Low Profit Margin</strong></td>
+              <td><span class="badge badge-warning">Warning</span></td>
+              <td>1 day ago</td>
+              <td><span class="badge badge-success">Acknowledged</span></td>
+              <td><button class="btn btn-secondary btn-sm">View</button></td>
+            </tr>
+            <tr>
+              <td><strong>Inventory Low Stock</strong></td>
+              <td><span class="badge badge-warning">Warning</span></td>
+              <td>3 days ago</td>
+              <td><span class="badge badge-success">Resolved</span></td>
+              <td><button class="btn btn-secondary btn-sm">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

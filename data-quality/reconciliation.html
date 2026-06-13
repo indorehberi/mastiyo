@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconciliation - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  <aside class="sidebar"><div class="sidebar-logo">📊 Mastiyo</div><nav class="sidebar-nav"><a href="reconciliation.html" class="nav-item active"><span class="icon">🔄</span> Reconcile</a></nav></aside>
+  <div class="main-content">
+    <header class="topbar"><div class="breadcrumb">Quality • <strong>Data Reconciliation</strong></div><div class="topbar-right"><div class="notif-bell">🔔</div><div class="user-avatar">JD</div></div></header>
+    <div class="page-content">
+      <h1 class="page-title">Data Reconciliation</h1>
+      <p class="page-subtitle">Cross-system data matching and resolution</p>
+
+      <div class="card">
+        <h3>Reconciliation Status</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>System</th><th>Record Count</th><th>Matched</th><th>Unmatched</th><th>Match %</th></tr></thead>
+          <tbody>
+            <tr><td><strong>PT APM System</strong></td><td>2,450</td><td>2,395</td><td>55</td><td style="color: var(--success);">97.8%</td></tr>
+            <tr><td><strong>Data Pipeline</strong></td><td>2,387</td><td>2,364</td><td>23</td><td style="color: var(--success);">99.0%</td></tr>
+            <tr><td><strong>Data Warehouse</strong></td><td>2,364</td><td>2,364</td><td>0</td><td style="color: var(--success);">100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Unmatched Records (78 total)</h3>
+        <table style="font-size: 0.9rem;">
+          <thead><tr><th>Issue</th><th>Count</th><th>System</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Missing in warehouse</td><td>55</td><td>PT APM</td><td><button class="btn btn-secondary btn-sm">Sync</button></td></tr>
+            <tr><td>Amount mismatch</td><td>12</td><td>Pipeline</td><td><button class="btn btn-secondary btn-sm">Review</button></td></tr>
+            <tr><td>Date discrepancy</td><td>8</td><td>PT APM</td><td><button class="btn btn-secondary btn-sm">Resolve</button></td></tr>
+            <tr><td>Duplicate detected</td><td>3</td><td>Pipeline</td><td><button class="btn btn-secondary btn-sm">Merge</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button class="btn btn-primary" onclick="alert('All unmatched records resolved and synchronized')">Reconcile & Sync All</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

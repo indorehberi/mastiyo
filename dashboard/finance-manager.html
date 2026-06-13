@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Finance Manager - Mastiyo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="layout-panel">
+  
+  <aside class="sidebar">
+    <div class="sidebar-logo">📊 Mastiyo</div>
+    <div class="sidebar-role">FINANCE MANAGER / CFO</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Main</div>
+      <a href="../dashboard/finance-manager.html" class="nav-item active">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      
+      <div class="nav-section">Financial Intelligence</div>
+      <a href="../ai-cfo/dashboard.html" class="nav-item">
+        <span class="icon">💰</span> Financial Health
+      </a>
+      <a href="../ai-cfo/analysis.html" class="nav-item">
+        <span class="icon">🔍</span> Analysis
+      </a>
+      <a href="../ai-cfo/recommendations.html" class="nav-item">
+        <span class="icon">💡</span> Recommendations
+      </a>
+      <a href="../ai-cfo/alerts.html" class="nav-item">
+        <span class="icon">⚠️</span> Financial Alerts
+      </a>
+
+      <div class="nav-section">Forecasting</div>
+      <a href="../forecast-agent/models.html" class="nav-item">
+        <span class="icon">🤖</span> Forecast Models
+      </a>
+      <a href="../forecast-agent/scenarios.html" class="nav-item">
+        <span class="icon">📊</span> Scenarios
+      </a>
+      <a href="../forecast-agent/predictions.html" class="nav-item">
+        <span class="icon">🔮</span> Predictions
+      </a>
+      <a href="../forecast-agent/performance.html" class="nav-item">
+        <span class="icon">📈</span> Accuracy
+      </a>
+
+      <div class="nav-section">Analytics</div>
+      <a href="../dashboard/kpi-overview.html" class="nav-item">
+        <span class="icon">📊</span> KPI Overview
+      </a>
+      <a href="../dashboard/trends.html" class="nav-item">
+        <span class="icon">📈</span> Trends
+      </a>
+      <a href="../reports/list.html" class="nav-item">
+        <span class="icon">📋</span> Reports
+      </a>
+
+      <div class="nav-section">Account</div>
+      <a href="../settings/profile.html" class="nav-item">
+        <span class="icon">⚙️</span> Settings
+      </a>
+      <a href="../auth/login.html" class="nav-item">
+        <span class="icon">🚪</span> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    
+    <header class="topbar">
+      <div class="breadcrumb">Finance Manager • <strong>Dashboard</strong></div>
+      <div class="topbar-right">
+        <input type="text" class="search-box" placeholder="Search...">
+        <div class="notif-bell">🔔<div class="dot"></div></div>
+        <div class="user-avatar">FM</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      
+      <h1 class="page-title">Finance Manager Dashboard</h1>
+      <p class="page-subtitle">PT APM Financial Intelligence • All KPIs and AI-Powered Insights</p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card success">
+          <div class="kpi-label">Revenue This Month</div>
+          <div class="kpi-value">Rp 2.75B</div>
+          <div class="kpi-trend up">↑ 18.5% YoY</div>
+        </div>
+        <div class="kpi-card gold">
+          <div class="kpi-label">Profit Margin</div>
+          <div class="kpi-value">22%</div>
+          <div class="kpi-trend text-warning">Target 25%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Liquidity Ratio</div>
+          <div class="kpi-value">1.85</div>
+          <div class="kpi-trend up">↑ Healthy</div>
+        </div>
+        <div class="kpi-card" style="border-color: #E74C3C; background: rgba(231, 76, 60, 0.05);">
+          <div class="kpi-label">Overdue AR</div>
+          <div class="kpi-value">Rp 5.2B</div>
+          <div class="kpi-trend text-danger">↑ 5% from last month</div>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <div class="card">
+          <div class="card-header">AI CFO Recommendations (This Month)</div>
+          <div style="padding: 1rem;">
+            <div style="margin-bottom: 1rem; padding: 0.75rem; background: rgba(52, 152, 219, 0.1); border-left: 3px solid #3498DB; border-radius: 4px;">
+              <strong>💡 Optimize Cash Flow</strong>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Accelerate collection from top 5 customers (60% of revenue)</p>
+            </div>
+            <div style="margin-bottom: 1rem; padding: 0.75rem; background: rgba(46, 204, 113, 0.1); border-left: 3px solid #27AE60; border-radius: 4px;">
+              <strong>📈 Expense Reduction Opportunity</strong>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Renegotiate supplier contracts - potential 8% savings</p>
+            </div>
+            <div style="padding: 0.75rem; background: rgba(241, 196, 15, 0.1); border-left: 3px solid #F39C12; border-radius: 4px;">
+              <strong>💰 Investment Opportunity</strong>
+              <p class="text-muted fs-sm" style="margin: 0.25rem 0;">Available cash for growth initiatives: Rp 450M</p>
+            </div>
+          </div>
+          <a href="../ai-cfo/recommendations.html" class="btn btn-primary" style="width: 100%; margin-top: 0.75rem; justify-content: center;">View All Recommendations</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">12-Month Revenue Forecast</div>
+          <div style="padding: 1rem 0;">
+            <svg viewBox="0 0 350 150" style="width: 100%; height: auto; display: block;">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#3498DB;stop-opacity:0.3" />
+                  <stop offset="100%" style="stop-color:#3498DB;stop-opacity:0" />
+                </linearGradient>
+              </defs>
+              <line x1="40" y1="120" x2="330" y2="120" stroke="#ddd" stroke-width="1"/>
+              <polyline points="40,100 65,75 90,85 115,60 140,70 165,45 190,55 215,35 240,50 265,30 290,45 315,25" fill="none" stroke="#3498DB" stroke-width="2"/>
+              <polygon points="40,100 65,75 90,85 115,60 140,70 165,45 190,55 215,35 240,50 265,30 290,45 315,25 315,120 40,120" fill="url(#gradient)"/>
+              <text x="35" y="135" font-size="10" fill="#666">Jan</text>
+              <text x="315" y="135" font-size="10" fill="#666">Dec</text>
+              <text x="35" y="20" font-size="11" font-weight="bold" fill="#333">Rp 8.0B Target</text>
+            </svg>
+          </div>
+          <a href="../forecast-agent/predictions.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Detailed Forecast</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">Financial Alerts</div>
+        <div style="padding: 1rem;">
+          <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <div style="flex: 1; padding: 0.75rem; background: #FFE6E6; border-radius: 6px;">
+              <div style="font-weight: 600; color: #C0392B;">⚠️ High Risk (2)</div>
+              <div class="fs-sm text-muted">Overdue payment from RSUD Bandung</div>
+            </div>
+            <div style="flex: 1; padding: 0.75rem; background: #FFF3CD; border-radius: 6px;">
+              <div style="font-weight: 600; color: #E67E22;">⚡ Medium Risk (5)</div>
+              <div class="fs-sm text-muted">DSO trending up (approaching target)</div>
+            </div>
+            <div style="flex: 1; padding: 0.75rem; background: #D4EDDA; border-radius: 6px;">
+              <div style="font-weight: 600; color: #27AE60;">✓ Healthy (3)</div>
+              <div class="fs-sm text-muted">Strong liquidity and cash position</div>
+            </div>
+          </div>
+        </div>
+        <a href="../ai-cfo/alerts.html" class="btn btn-sm btn-outline" style="width: 100%; justify-content: center;">View All Alerts</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wf-label">WIREFRAME — Mastiyo AI-Powered BI Platform</div>
+
+</body>
+</html>
